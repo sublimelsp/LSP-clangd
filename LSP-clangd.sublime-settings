@@ -1,0 +1,13 @@
+{
+    // The path to clangd
+    "command": ["${clangd_path}"],
+    // Enable clangd for C/C++ and Objective-C/C++
+    "selector": "source.c | source.c++ | source.objc | source.objc++",
+    // Makes the auto-complete not trigger twice when writing a -> or when writing ::
+    "auto_complete_selector": "punctuation.accessor | (meta.preprocessor.include string - punctuation.definition.string.end)",
+    // The github release to install. Leave empty to install a version that was tested with this plugin.
+    "version": "",
+    "settings": {
+
+    }
+}
