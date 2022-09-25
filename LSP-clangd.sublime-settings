@@ -10,74 +10,73 @@
     // "": Prefers the system binary or asks the user if a GitHub release should be installed
     "binary": "",
 
-    // clangd options. Set to null to keep the clangd-default.
+    // clangd options. Set to null to keep the clangd default.
 
     // clangd compilation flags options:
 
     // Specify a path to look for compile_commands.json.
     // If path is invalid, clangd will look in the current directory and parent paths of each source file
-    "compile-commands-dir": null,
+    "clangd.compile-commands-dir": null,
     // Comma separated list of globs for white-listing gcc-compatible drivers that are safe to execute.
     // Drivers matching any of these globs will be used to extract system includes. e.g. /usr/bin/**/clang-*,/path/to/repo/**/g++-*
-    "query-driver": null,
+    "clangd.query-driver": null,
 
     // clangd feature options:
 
     // If set to true, code completion will include index symbols that are not defined in the scopes (e.g. namespaces) visible from the code completion point.
     // Such completions can insert scope qualifiers
-    "all-scopes-completion": false,
+    "clangd.all-scopes-completion": false,
     // Index project code in the background and persist index on disk
-    "background-index": false,
+    "clangd.background-index": false,
     // Enable clang-tidy diagnostics
-    "clang-tidy": false,
+    "clangd.clang-tidy": false,
     // Granularity of code completion suggestions
     // detailed: One completion item for each semantically distinct completion, with full type information
     // bundled: Similar completion items (e.g. function overloads) are combined. Type information shown where possible
-    "completion-style": null,
+    "clangd.completion-style": null,
     // clang-format style to apply by default when no .clang-format file is found
-    "fallback-style": null,
+    "clangd.fallback-style": null,
     // When disabled, completions contain only parentheses for function calls.
     // When enabled, completions also contain placeholders for method parameters
-    "function-arg-placeholders": false,
+    "clangd.function-arg-placeholders": false,
     // Add #include directives when accepting code completions
     // iwyu: Include what you use. Insert the owning header for top-level symbols, unless the header is already directly included or the symbol is forward-declared
     // never: Never insert #include directives as part of code completion
-    "header-insertion": null,
+    "clangd.header-insertion": null,
     // Prepend a circular dot or space before the completion label, depending on whether an include line will be inserted or not
-    "header-insertion-decorators": false,
+    "clangd.header-insertion-decorators": false,
     // Limit the number of references returned by clangd. 0 means no limit (default=1000)
-    "limit-references": null,
+    "clangd.limit-references": null,
     // Limit the number of results returned by clangd. 0 means no limit (default=100)
-    "limit-results": null,
+    "clangd.limit-results": null,
 
     // clangd miscellaneous options:
 
     // Number of workers used for indexing and language server
-    "number_of_workers": null,
+    "clangd.number-workers": null,
     // Set to "true" to release memory periodically via malloc_trim(3)
-    "malloc-trim": false,
+    "clangd.malloc-trim": false,
     // One of "disk", "memory". Storing PCHs in memory increases memory usages, but may improve performance
-    "pch-storage": null,
+    "clangd.pch-storage": null,
     // Read user and project configuration from YAML files.
-    "enable-config": false, 
+    "clangd.enable-config": false, 
 
     // clangd protocol and logging options:
 
     // One of "error", "info", "verbose"
-    "log": null,
+    "clangd.log": null,
     // Translates between client paths (as seen by a remote editor) and server paths (where clangd sees files on disk).
     // Comma separated list of '<client_path>=<server_path>' pairs, the first entry matching a given path is used. e.g. /home/project/incl=/opt/include,/home/project=/workarea/project
-    "path-mappings": null,
+    "clangd.path-mappings": null,
     // Pretty-print JSON output
-    "pretty": false,
+    "clangd.pretty": false,
 
     //////////////////
     // LSP Settings //
     //////////////////
 
-    // The command to start `clangd`.
-    // Do not change the command manually. The command is modified internally based on user settings.
-    "command": ["${clangd_path}"],
+    // The command to start `clangd`, generated internally.
+    "command": [],
     // Enable clangd for C/C++ and Objective-C/C++
     "selector": "source.c | source.c++ | source.objc | source.objc++",
     // Makes the auto-complete not trigger twice when writing a -> or when writing ::
@@ -85,7 +84,8 @@
     "initializationOptions": {
         // @see https://clangd.llvm.org/extensions#file-status
         // Enables receiving textDocument/clangd.fileStatus notifications.
-        "clangdFileStatus": true,
+        // -- unsupported --
+        "clangdFileStatus": false,
         // @see https://clangd.llvm.org/extensions#compilation-commands
         // Controls the flags used when no specific compile command is found.
         // The compile command will be approximately clang $FILE $fallbackFlags in this case.
