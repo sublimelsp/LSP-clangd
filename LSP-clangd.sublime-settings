@@ -4,11 +4,10 @@
     /////////////////////////
 
     // The clangd binary to use.
-    // "system": Enforces the system binary found in path
-    // "/path/to/clangd": Enforces a certain binary
-    // "github": Downloads the latest tested release from GitHub
-    // "": Prefers the system binary or asks the user if a GitHub release should be installed
-    "binary": "",
+    // "system": Prefers the system binary found in path
+    // "auto": Prefers the system binary but falls back to GitHub without user intervention
+    // "github": Prefers the latest tested release from GitHub
+    "binary": "system",
 
     // clangd options. Set to null to keep the clangd default.
 
