@@ -27,6 +27,9 @@
     "clangd.all-scopes-completion": false,
     // Index project code in the background and persist index on disk
     "clangd.background-index": false,
+    // Thread priority for building the background index. The effect of this flag is OS-specific.
+    // One of "background", "low", "normal"
+    "clangd.background-index-priority": null,
     // Enable clang-tidy diagnostics
     "clangd.clang-tidy": false,
     // Granularity of code completion suggestions
@@ -48,6 +51,10 @@
     "clangd.limit-references": null,
     // Limit the number of results returned by clangd. 0 means no limit (default=100)
     "clangd.limit-results": null,
+    // Path to the project root. Requires remote-index-address to be set
+    "clangd.project-root": null,
+    // Address of the remote index server
+    "clangd.remote-index-address": null,
 
     // clangd miscellaneous options:
 

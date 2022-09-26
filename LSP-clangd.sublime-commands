@@ -1,3 +1,14 @@
 [
-    
+    {
+        "caption": "Preferences: LSP-clangd Settings",
+        "command": "edit_settings",
+        "args": {
+            "base_file": "${packages}/LSP-clangd/LSP-clangd.sublime-settings",
+            "default": "// Settings in here override those in \"LSP-clangd/LSP-clangd.sublime-settings\"\n{\n\t$0\n}\n"
+        }
+    },
+    {
+        "caption": "LSP-clangd: Switch to Source/Header",
+        "command": "lsp_clangd_switch_source_header",
+    },
 ]
