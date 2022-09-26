@@ -2,8 +2,8 @@
 C++ support for Sublime's LSP plugin provided through clangd.
 
 ## Installation
-    - Install LSP and LSP-clangd from Package Control
-    - Install clangd using your package manager or let this plugin install clangd for you
+- Install LSP and LSP-clangd from Package Control
+- Install clangd using your package manager or let this plugin install clangd for you
 
 ## Usage
 
