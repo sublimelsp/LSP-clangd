@@ -182,6 +182,7 @@ class LspClangdSwitchSourceHeader(LspTextCommand):
         if not response:
             sublime.status_message("{}: could not determine source/header".format(self.session_name))
             return
+        # session.open_uri_async(response) does currently not focus the view
         _, file_path = parse_uri(response)
         window = self.view.window()
         if not window:
