@@ -152,7 +152,7 @@ class Clangd(AbstractPlugin):
                 continue
             elif value is True:
                 configuration.command.append(get_argument_for_setting(key))
-            elif isinstance(value, str):
+            elif isinstance(value, str) or isinstance(value, int):
                 configuration.command.append("{key}={value}".format(key=get_argument_for_setting(key), value=value))
             else:
                 raise TypeError("Type {} not supported for setting {}.".format(str(type(value)), key))

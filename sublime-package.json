@@ -1,3 +1,263 @@
 {
-    
+  "contributions": {
+    "settings": [
+      {
+        "file_patterns": [
+          "/LSP-clangd.sublime-settings"
+        ],
+        "schema": {
+          "$id": "sublime://settings/LSP-clangd",
+          "definitions": {
+            "PluginConfig": {
+              "properties": {
+                "binary": {
+                  "type": "string",
+                  "default": "system",
+                  "description": "The clangd binary to use.",
+                  "enum": [
+                    "system",
+                    "auto",
+                    "github"
+                  ],
+                  "enumDescriptions": [
+                    "Prefers the system binary found in path",
+                    "Prefers the system binary but falls back to GitHub without user intervention",
+                    "Prefers the latest tested release from GitHub",
+                  ],
+                },
+                "initializationOptions": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "clangdFileStatus": {
+                      "type": "boolean",
+                      "description": "Enables receiving textDocument/clangd.fileStatus notifications.",
+                      "enum": [
+                        false
+                      ],
+                      "default": false,
+                    },
+                    "fallbackFlags": {
+                      "type": "array",
+                      "default": [],
+                      "description": "Controls the flags used when no specific compile command is found. The compile command will be approximately clang $FILE $fallbackFlags in this case."
+                    },
+                    "clangd.compile-commands-dir": {
+                      "type": [
+                        "null",
+                        "string"
+                      ],
+                      "default": null,
+                      "description": "Specify a path to look for compile_commands.json. If path is invalid, clangd will look in the current directory and parent paths of each source file."
+                    },
+                    "clangd.query-driver": {
+                      "type": [
+                        "null",
+                        "string"
+                      ],
+                      "default": null,
+                      "description": "Comma separated list of globs for white-listing gcc-compatible drivers that are safe to execute."
+                    },
+                    "clangd.all-scopes-completion": {
+                      "type": "boolean",
+                      "description": "If set to true, code completion will include index symbols that are not defined in the scopes (e.g. namespaces) visible from the code completion point."
+                    },
+                    "clangd.background-index": {
+                      "type": "boolean",
+                      "description": "Index project code in the background and persist index on disk."
+                    },
+                    "clangd.background-index-priority": {
+                      "type": [
+                        "null",
+                        "string"
+                      ],
+                      "default": null,
+                      "description": "Thread priority for building the background index. The effect of this flag is OS-specific.",
+                      "enum": [
+                        null,
+                        "background",
+                        "low",
+                        "normal"
+                      ]
+                    },
+                    "clangd.clang-tidy": {
+                      "type": "boolean",
+                      "description": "Enable clang-tidy diagnostics."
+                    },
+                    "clangd.completion-style": {
+                      "type": [
+                        "null",
+                        "string"
+                      ],
+                      "default": null,
+                      "description": "Granularity of code completion suggestions",
+                      "enum": [
+                        null,
+                        "detailed",
+                        "bundled"
+                      ],
+                      "enumDescriptions": [
+                        "Use the clangd default",
+                        "One completion item for each semantically distinct completion, with full type information",
+                        "Similar completion items (e.g. function overloads) are combined. Type information shown where possible"
+                      ]
+                    },
+                    "clangd.fallback-style": {
+                      "type": [
+                        "null",
+                        "string"
+                      ],
+                      "default": null,
+                      "description": "clang-format style to apply by default when no .clang-format file is found"
+                    },
+                    "clangd.function-arg-placeholders": {
+                      "type": "boolean",
+                      "enum": [
+                        true,
+                        false
+                      ],
+                      "enumDescriptions": [
+                        "completions also contain placeholders for method parameters",
+                        "completions contain only parentheses for function calls"
+                      ]
+                    },
+                    "clangd.header-insertion": {
+                      "type": [
+                        "null",
+                        "string"
+                      ],
+                      "default": null,
+                      "enum": [
+                        null,
+                        "iwyu",
+                        "ever"
+                      ],
+                      "enumDescriptions": [
+                        "Use the clangd default",
+                        "Include what you use. Insert the owning header for top-level symbols, unless the header is already directly included or the symbol is forward-declared",
+                        "Never insert #include directives as part of code completion"
+                      ]
+                    },
+                    "clangd.header-insertion-decorators": {
+                      "type": "boolean",
+                      "description": "Prepend a circular dot or space before the completion label, depending on whether an include line will be inserted or not"
+                    },
+                    "clangd.limit-references": {
+                      "type": [
+                        "null",
+                        "integer"
+                      ],
+                      "default": null,
+                      "description": "Limit the number of references returned by clangd. 0 means no limit (clangd default=1000)",
+                      "minimum": 0
+                    },
+                    "clangd.limit-results": {
+                      "type": [
+                        "null",
+                        "integer"
+                      ],
+                      "default": null,
+                      "description": "Limit the number of results returned by clangd. 0 means no limit (clangd default=100)",
+                      "minimum": 0
+                    },
+                    "clangd.project-root": {
+                      "type": [
+                        "null",
+                        "string"
+                      ],
+                      "default": null,
+                      "description": "Path to the project root. Requires remote-index-address to be set"
+                    },
+                    "clangd.remote-index-address": {
+                      "type": [
+                        "null",
+                        "string"
+                      ],
+                      "default": null,
+                      "description": "Address of the remote index server"
+                    },
+                    "clangd.number-workers": {
+                      "type": [
+                        "null",
+                        "string"
+                      ],
+                      "default": null,
+                      "description": "Number of workers used for indexing and language server"
+                    },
+                    "clangd.malloc-trim": {
+                      "type": "boolean",
+                      "description": "Release memory periodically via malloc_trim(3)"
+                    },
+                    "clangd.pch-storage": {
+                      "type": [
+                        "null",
+                        "string"
+                      ],
+                      "default": null,
+                      "description": "Sets the PCH storage. Storing PCHs in memory increases memory usages, but may improve performance",
+                      "enum": [
+                        null, "disk", "memory"
+                      ]
+                    },
+                    "clangd.enable-config": {
+                      "type": "boolean",
+                      "description": "Read user and project configuration from YAML files."
+                    },
+                    "clangd.log": {
+                      "type": [
+                        "null",
+                        "string"
+                      ],
+                      "default": null,
+                      "description": "Sets the clangd log level",
+                      "enum": [null, "error", "info", "verbose"]
+                    },
+                    "clangd.path-mappings": {
+                      "type": [
+                        "null",
+                        "string"
+                      ],
+                      "default": null,
+                      "description": "Translates between client paths (as seen by a remote editor) and server paths (where clangd sees files on disk)."
+                    },
+                    "clangd.pretty": {
+                      "type": "boolean",
+                      "description": "Pretty-print JSON output"
+                    }
+                  },
+                }
+              },
+            }
+          },
+          "allOf": [
+            {
+              "$ref": "sublime://settings/LSP-plugin-base"
+            },
+            {
+              "$ref": "sublime://settings/LSP-clangd#/definitions/PluginConfig"
+            }
+          ]
+        }
+      },
+      {
+        "file_patterns": [
+          "/*.sublime-project"
+        ],
+        "schema": {
+          "properties": {
+            "settings": {
+              "properties": {
+                "LSP": {
+                  "properties": {
+                    "clangd": {
+                      "$ref": "sublime://settings/LSP-clangd#/definitions/PluginConfig"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
 }
