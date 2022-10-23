@@ -1,11 +1,11 @@
 # LSP-clangd
 
-C++ support for Sublime's LSP plugin provided through clangd.
+C/C++ and Objective-C/C++ support for Sublime's LSP plugin provided through clangd.
 
 ## Installation
 
-- Install LSP and LSP-clangd from Package Control
-- Install clangd using your package manager or let this plugin install clangd for you
+- Install [LSP](https://packagecontrol.io/packages/LSP) and `LSP-clangd` from Package Control
+- (Optional) Install clangd using your package manager or let this package install clangd for you
 
 ## Usage
 
@@ -29,4 +29,4 @@ If your build directory is equivalent to the root of the project or `<project_ro
 
 | Sublime Command                 | Description                                                 |
 | ------------------------------- | ----------------------------------------------------------- |
-| lsp_clangd_switch_source_header | Switch between the main source file (.cpp) and header (.h). |
+| `lsp_clangd_switch_source_header` | Switch between the main source file (.cpp) and header (.h). |
