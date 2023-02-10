@@ -17,7 +17,7 @@ STORAGE_DIR = "LSP-clangd"
 SETTINGS_FILENAME = "LSP-clangd.sublime-settings"
 GITHUB_DL_URL = 'https://github.com/clangd/clangd/releases/download/'\
                 + '{release_tag}/clangd-{platform}-{release_tag}.zip'
-GITHUB_RELEASE = '15.0.1'
+GITHUB_RELEASE = '15.0.6'
 
 # Options under `initializationOptions` that are prefixed with this prefix
 # aren't really `initializationOptions` but get converted to command line arguments
