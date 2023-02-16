@@ -34,7 +34,7 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
         with:
-          commit-message: Bump clangd to ${{ needs.compareTag.outputs.latest_tag }}
-          title: Bump clangd to ${{ needs.compareTag.outputs.latest_tag }}
+          commit-message: "chore: Bump clangd to ${{ needs.compareTag.outputs.latest_tag }}"
+          title: "chore: Bump clangd to ${{ needs.compareTag.outputs.latest_tag }}"
           labels: auto-update
           branch: chore/update/clangd-${{ needs.compareTag.outputs.branch_name }}

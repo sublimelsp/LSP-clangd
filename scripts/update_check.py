@@ -13,7 +13,7 @@ def main():
     latest_str = [str(s) for s in latest]
     with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
         print(f'REQUIRES_UPDATE={int(latest > CLANGD_VERSION)}', file=fh)
-        print(f'LATEST_VERSION={".".join(latest_str)}', file=fh)
+        print(f'LATEST_TAG={".".join(latest_str)}', file=fh)
         print(f'BRANCH_NAME={"_".join(latest_str)}', file=fh)
 
 
