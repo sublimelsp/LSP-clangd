@@ -1,24 +1,37 @@
-from LSP.plugin import AbstractPlugin, register_plugin, unregister_plugin, WorkspaceFolder, ClientConfig, LspTextCommand, Request, parse_uri
-from LSP.plugin.core.typing import Optional, List
-
 import os
-from urllib.request import urlopen
 import shutil
 import stat
-import zipfile
+import sys
 import tempfile
-from LSP.plugin.core.views import text_document_identifier
+import zipfile
+from urllib.request import urlopen
 
 import sublime
+from LSP.plugin import (
+    AbstractPlugin,
+    ClientConfig,
+    LspTextCommand,
+    Request,
+    WorkspaceFolder,
+    parse_uri,
+    register_plugin,
+    unregister_plugin,
+)
+from LSP.plugin.core.typing import List, Optional
+from LSP.plugin.core.views import text_document_identifier
 
+# Fix reloading for submodules
+for m in list(sys.modules.keys()):
+    if m.startswith(__package__ + ".") and m != __name__:
+        del sys.modules[m]
+
+from .modules.version import CLANGD_VERSION  # noqa: E402
 
 SESSION_NAME = "clangd"
 STORAGE_DIR = "LSP-clangd"
 SETTINGS_FILENAME = "LSP-clangd.sublime-settings"
 GITHUB_DL_URL = 'https://github.com/clangd/clangd/releases/download/'\
                 + '{release_tag}/clangd-{platform}-{release_tag}.zip'
-GITHUB_RELEASE = '15.0.6'
-
 # Options under `initializationOptions` that are prefixed with this prefix
 # aren't really `initializationOptions` but get converted to command line arguments
 # when this plugin starts the server.
@@ -26,6 +39,7 @@ CLANGD_SETTING_PREFIX = "clangd."
 CLANGD_SETTING_TO_ARGUMENT = {
     "number-workers": "-j"
 }
+VERSION_STRING = ".".join(str(s) for s in CLANGD_VERSION)
 
 
 def get_argument_for_setting(key: str) -> str:
@@ -47,7 +61,7 @@ def clangd_download_url():
     platform = sublime.platform()
     if platform == "osx":
         platform = "mac"
-    return GITHUB_DL_URL.format(release_tag=GITHUB_RELEASE, platform=platform)
+    return GITHUB_DL_URL.format(release_tag=VERSION_STRING, platform=platform)
 
 
 def download_file(url: str, file: str) -> None:
@@ -66,7 +80,7 @@ def download_server(path: str):
         with zipfile.ZipFile(zip_path, "r") as zip_file:
             zip_file.extractall(tempdir)
 
-        shutil.move(os.path.join(tempdir, "clangd_{version}".format(version=GITHUB_RELEASE)), path)
+        shutil.move(os.path.join(tempdir, "clangd_{version}".format(version=VERSION_STRING)), path)
 
 
 class Clangd(AbstractPlugin):
@@ -81,7 +95,7 @@ class Clangd(AbstractPlugin):
     @classmethod
     def managed_server_binary_path(cls) -> Optional[str]:
         binary_name = "clangd.exe" if sublime.platform() == "windows" else "clangd"
-        path = os.path.join(cls.storage_subpath(), "clangd_{version}/bin/{binary_name}".format(version=GITHUB_RELEASE, binary_name=binary_name))
+        path = os.path.join(cls.storage_subpath(), "clangd_{version}/bin/{binary_name}".format(version=VERSION_STRING, binary_name=binary_name))
         if os.path.exists(path):
             return path
         return None

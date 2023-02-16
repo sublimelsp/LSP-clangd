@@ -1,0 +1,40 @@
+name: clangd update check
+
+on:
+  schedule:
+    - cron: "0 0 */7 * *"
+  workflow_dispatch:
+
+jobs:
+  compareTag:
+    runs-on: ubuntu-latest
+    outputs:
+      latest_tag: ${{ steps.updateCheck.outputs.LATEST_TAG }}
+      requires_update: ${{ steps.updateCheck.outputs.REQUIRES_UPDATE }}
+      branch_name: ${{ steps.updateCheck.outputs.BRANCH_NAME }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - id: updateCheck
+        name: Run script
+        run: python ./scripts/update_check.py
+
+  makePR:
+    needs:
+      - compareTag
+    if: needs.compareTag.outputs.requires_update == 1
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v4
+      - name: Write modules/version.py
+        run: python ./scripts/update_version.py
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        with:
+          commit-message: "chore: Bump clangd to ${{ needs.compareTag.outputs.latest_tag }}"
+          title: "chore: Bump clangd to ${{ needs.compareTag.outputs.latest_tag }}"
+          labels: auto-update
+          branch: chore/update/clangd-${{ needs.compareTag.outputs.branch_name }}
