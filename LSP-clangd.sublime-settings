@@ -11,7 +11,7 @@
     // The command to start `clangd`, generated internally.
     "command": [],
     // Enable clangd for C/C++ and Objective-C/C++
-    "selector": "source.c | source.c++ | source.objc | source.objc++",
+    "selector": "source.c | source.c++ | source.objc | source.objc++ | source.cuda-c++",
     // Makes the auto-complete not trigger twice when writing a -> or when writing ::
     "auto_complete_selector": "punctuation.accessor | (meta.preprocessor.include string - punctuation.definition.string.end)",
     "initializationOptions": {
