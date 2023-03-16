@@ -93,7 +93,7 @@ class Clangd(AbstractPlugin):
         return os.path.join(cls.storage_path(), STORAGE_DIR)
 
     @classmethod
-    def managed_server_binary_path(cls) -> Optional[str]:
+    def managed_clangd_path(cls) -> Optional[str]:
         binary_name = "clangd.exe" if sublime.platform() == "windows" else "clangd"
         path = os.path.join(cls.storage_subpath(), "clangd_{version}/bin/{binary_name}".format(version=VERSION_STRING, binary_name=binary_name))
         if os.path.exists(path):
@@ -101,22 +101,37 @@ class Clangd(AbstractPlugin):
         return None
 
     @classmethod
+    def system_clangd_path(cls) -> Optional[str]:
+        system_binary = get_settings().get("system_binary")
+        # Detect if clangd is installed or the command points to a valid binary.
+        # Fallback, shutil.which has issues on Windows.
+        system_binary_path = shutil.which(system_binary) or system_binary
+        if not os.path.isfile(system_binary_path):
+            return None
+        return system_binary_path
+
+    @classmethod
     def clangd_path(cls) -> Optional[str]:
+        """The command to start clangd without any configuration arguments"""
         binary_setting = get_settings().get("binary")
         if binary_setting == "system":
-            return shutil.which("clangd")
+            return cls.system_clangd_path()
         elif binary_setting == "github":
-            return cls.managed_server_binary_path()
+            return cls.managed_clangd_path()
         else:
             # binary_setting == "auto":
-            return shutil.which("clangd") or cls.managed_server_binary_path()
+            return cls.system_clangd_path() or cls.managed_clangd_path()
 
     @classmethod
     def needs_update_or_installation(cls) -> bool:
+        if get_settings().get("binary") == "custom":
+            return False
         return cls.clangd_path() is None
 
     @classmethod
     def install_or_update(cls) -> None:
+        # Binary cannot be set to custom because needs_update_or_installation
+        # returns False in this case
         if get_settings().get("binary") == "system":
             ans = sublime.yes_no_cancel_dialog("clangd was not found in your path. Would you like to auto-install clangd from GitHub?")
             if ans == sublime.DIALOG_YES:
@@ -136,7 +151,7 @@ class Clangd(AbstractPlugin):
         download_server(cls.storage_subpath())
 
         # zip does not preserve file mode
-        path = cls.managed_server_binary_path()
+        path = cls.managed_clangd_path()
         if not path:
             # this should never happen
             raise ValueError("installation failed silently")
@@ -152,13 +167,17 @@ class Clangd(AbstractPlugin):
         configuration: ClientConfig,
     ) -> Optional[str]:
 
-        clangd_path = cls.clangd_path()
-        if not clangd_path:
-            raise ValueError("clangd is currently not installed.")
+        if get_settings().get("binary") == "custom":
+            clangd_base_command = configuration.init_options.get("custom_command")  # type: List[str]
+        else:
+            clangd_path = cls.clangd_path()
+            if not clangd_path:
+                raise ValueError("clangd is currently not installed.")
+            clangd_base_command = [clangd_path]
 
         # The configuration is persisted
         # reset the command to prevent adding an argument multiple times
-        configuration.command = [clangd_path]
+        configuration.command = clangd_base_command.copy()
 
         for key, value in configuration.init_options.get("clangd").items():
             if not value:
