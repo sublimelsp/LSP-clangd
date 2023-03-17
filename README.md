@@ -25,6 +25,30 @@ If your build directory is equivalent to the root of the project or `<project_ro
 
 > See [clangd Project Setup](https://clangd.llvm.org/installation#project-setup) for more information on using `compile_commands.json`, `compile_flags.txt` and other build systems.
 
+## Configuration
+
+Here are some ways to configure the package and the language server.
+
+- From `Preferences > Package Settings > LSP > Servers > LSP-clangd`
+- From the command palette: `Preferences: LSP-clangd Settings`
+- Project-specific configuration.
+  From the command palette run `Project: Edit Project` and add your settings in:
+
+  ```js
+  {
+     "settings": {
+        "LSP": {
+           "clangd": {
+              "initializationOptions": {
+                // Put your settings here eg.
+                // "clangd.header-insertion": "iwyu",
+              }
+           }
+        }
+     }
+  }
+  ```
+
 ## Sublime Commands
 
 | Sublime Command                 | Description                                                 |
