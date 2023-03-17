@@ -20,7 +20,7 @@
     "auto_complete_selector": "punctuation.accessor | (meta.preprocessor.include string - punctuation.definition.string.end)",
     "initializationOptions": {
         // A custom command to start clangd. Set `binary` to `custom` to use this command.
-        // The configuration arguments are added to this command.
+        // The command-line arguments which are generated from the `clang.*` settings are appended to this command.
         // This can be used for MSYS2's clangd for example.
         "custom_command": [],
 

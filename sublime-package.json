@@ -38,7 +38,7 @@
                     "custom_command": {
                       "type": "array",
                       "default": [],
-                      "markdownDescription": "A custom command to start clangd. Set `binary` to `custom` to use this command. The configuration arguments are added to this command."
+                      "markdownDescription": "A custom command to start clangd. Set `binary` to `custom` to use this command. The command-line arguments which are generated from the `clang.*` settings are appended to this command."
                     },
                     "clangdFileStatus": {
                       "type": "boolean",
