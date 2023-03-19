@@ -4,17 +4,26 @@
     /////////////////////////
 
     // The clangd binary to use.
-    // "system": Prefers the system binary found in path
+    // "system": Prefers the system binary below
     // "auto": Prefers the system binary but falls back to GitHub without user intervention
     // "github": Prefers the latest tested release from GitHub
+    // "custom": Use the custom command in the initializationOptions below
     "binary": "system",
-    // The command to start `clangd`, generated internally.
+    // The binary to use when `binary` is set to `system`.
+    "system_binary": "clangd",
+    // Generated internally because clangd is configured via command line arguments.
+    // DO NOT CHANGE THIS, use `system_binary` or `custom_command` instead.
     "command": [],
     // Enable clangd for C/C++ and Objective-C/C++
     "selector": "source.c | source.c++ | source.objc | source.objc++ | source.cuda-c++",
     // Makes the auto-complete not trigger twice when writing a -> or when writing ::
     "auto_complete_selector": "punctuation.accessor | (meta.preprocessor.include string - punctuation.definition.string.end)",
     "initializationOptions": {
+        // A custom command to start clangd. Set `binary` to `custom` to use this command.
+        // The command-line arguments which are generated from the `clang.*` settings are appended to this command.
+        // This can be used for MSYS2's clangd for example.
+        "custom_command": [],
+
         // @see https://clangd.llvm.org/extensions#file-status
         // Enables receiving textDocument/clangd.fileStatus notifications.
         // -- unsupported --

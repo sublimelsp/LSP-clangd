@@ -17,17 +17,29 @@
                   "enum": [
                     "system",
                     "auto",
-                    "github"
+                    "github",
+                    "custom"
                   ],
                   "enumDescriptions": [
                     "Prefers the system binary found in path",
                     "Prefers the system binary but falls back to GitHub without user intervention",
                     "Prefers the latest tested release from GitHub",
+                    "Use the custom command in the initializationOptions below",
                   ],
+                },
+                "system_binary": {
+                  "type": "string",
+                  "default": "clangd",
+                  "markdownDescription": "The binary to use when `binary` is set to `system`."
                 },
                 "initializationOptions": {
                   "additionalProperties": false,
                   "properties": {
+                    "custom_command": {
+                      "type": "array",
+                      "default": [],
+                      "markdownDescription": "A custom command to start clangd. Set `binary` to `custom` to use this command. The command-line arguments which are generated from the `clang.*` settings are appended to this command."
+                    },
                     "clangdFileStatus": {
                       "type": "boolean",
                       "description": "Enables receiving textDocument/clangd.fileStatus notifications.",
@@ -195,7 +207,9 @@
                       "default": null,
                       "description": "Sets the PCH storage. Storing PCHs in memory increases memory usages, but may improve performance",
                       "enum": [
-                        null, "disk", "memory"
+                        null,
+                        "disk",
+                        "memory"
                       ]
                     },
                     "clangd.enable-config": {
@@ -209,7 +223,12 @@
                       ],
                       "default": null,
                       "description": "Sets the clangd log level",
-                      "enum": [null, "error", "info", "verbose"]
+                      "enum": [
+                        null,
+                        "error",
+                        "info",
+                        "verbose"
+                      ]
                     },
                     "clangd.path-mappings": {
                       "type": [
