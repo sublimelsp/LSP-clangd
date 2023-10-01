@@ -180,12 +180,13 @@ class Clangd(AbstractPlugin):
         configuration.command = clangd_base_command.copy()
 
         for key, value in configuration.init_options.get("clangd").items():
-            if not value:
-                # False or None
-                continue
-            elif value is True:
-                configuration.command.append(get_argument_for_setting(key))
-            elif isinstance(value, str) or isinstance(value, int):
+            if value is None:
+                continue  # Use clangd default
+
+            if isinstance(value, bool):
+                value = str(value).lower()
+
+            if isinstance(value, str) or isinstance(value, int):
                 configuration.command.append("{key}={value}".format(key=get_argument_for_setting(key), value=value))
             else:
                 raise TypeError("Type {} not supported for setting {}.".format(str(type(value)), key))

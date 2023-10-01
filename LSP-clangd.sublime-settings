@@ -49,14 +49,14 @@
 
         // If set to true, code completion will include index symbols that are not defined in the scopes (e.g. namespaces) visible from the code completion point.
         // Such completions can insert scope qualifiers
-        "clangd.all-scopes-completion": false,
+        "clangd.all-scopes-completion": null,
         // Index project code in the background and persist index on disk
-        "clangd.background-index": false,
+        "clangd.background-index": null,
         // Thread priority for building the background index. The effect of this flag is OS-specific.
         // One of "background", "low", "normal"
         "clangd.background-index-priority": null,
         // Enable clang-tidy diagnostics
-        "clangd.clang-tidy": false,
+        "clangd.clang-tidy": null,
         // Granularity of code completion suggestions
         // detailed: One completion item for each semantically distinct completion, with full type information
         // bundled: Similar completion items (e.g. function overloads) are combined. Type information shown where possible
@@ -65,13 +65,13 @@
         "clangd.fallback-style": null,
         // When disabled, completions contain only parentheses for function calls.
         // When enabled, completions also contain placeholders for method parameters
-        "clangd.function-arg-placeholders": false,
+        "clangd.function-arg-placeholders": null,
         // Add #include directives when accepting code completions
         // iwyu: Include what you use. Insert the owning header for top-level symbols, unless the header is already directly included or the symbol is forward-declared
         // never: Never insert #include directives as part of code completion
         "clangd.header-insertion": null,
         // Prepend a circular dot or space before the completion label, depending on whether an include line will be inserted or not
-        "clangd.header-insertion-decorators": false,
+        "clangd.header-insertion-decorators": null,
         // Limit the number of references returned by clangd. 0 means no limit (default=1000)
         "clangd.limit-references": null,
         // Limit the number of results returned by clangd. 0 means no limit (default=100)
@@ -86,11 +86,11 @@
         // Number of workers used for indexing and language server
         "clangd.number-workers": null,
         // Set to "true" to release memory periodically via malloc_trim(3)
-        "clangd.malloc-trim": false,
+        "clangd.malloc-trim": null,
         // One of "disk", "memory". Storing PCHs in memory increases memory usages, but may improve performance
         "clangd.pch-storage": null,
         // Read user and project configuration from YAML files.
-        "clangd.enable-config": false, 
+        "clangd.enable-config": null, 
 
         // clangd protocol and logging options:
 
@@ -100,6 +100,6 @@
         // Comma separated list of '<client_path>=<server_path>' pairs, the first entry matching a given path is used. e.g. /home/project/incl=/opt/include,/home/project=/workarea/project
         "clangd.path-mappings": null,
         // Pretty-print JSON output
-        "clangd.pretty": false,
+        "clangd.pretty": null,
     },
 }
