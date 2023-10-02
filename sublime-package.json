@@ -70,11 +70,19 @@
                       "description": "Comma separated list of globs for white-listing gcc-compatible drivers that are safe to execute."
                     },
                     "clangd.all-scopes-completion": {
-                      "type": "boolean",
+                      "type": [
+                        "boolean",
+                        "null"
+                      ],
+                      "default": null,
                       "description": "If set to true, code completion will include index symbols that are not defined in the scopes (e.g. namespaces) visible from the code completion point."
                     },
                     "clangd.background-index": {
-                      "type": "boolean",
+                      "type": [
+                        "boolean",
+                        "null"
+                      ],
+                      "default": null,
                       "description": "Index project code in the background and persist index on disk."
                     },
                     "clangd.background-index-priority": {
@@ -92,7 +100,11 @@
                       ]
                     },
                     "clangd.clang-tidy": {
-                      "type": "boolean",
+                      "type": [
+                        "boolean",
+                        "null"
+                      ],
+                      "default": null,
                       "description": "Enable clang-tidy diagnostics."
                     },
                     "clangd.completion-style": {
@@ -122,12 +134,18 @@
                       "description": "clang-format style to apply by default when no .clang-format file is found"
                     },
                     "clangd.function-arg-placeholders": {
-                      "type": "boolean",
+                      "type": [
+                        "boolean",
+                        "null"
+                      ],
+                      "default": null,
                       "enum": [
+                        null,
                         true,
                         false
                       ],
                       "enumDescriptions": [
+                        "use clangd default",
                         "completions also contain placeholders for method parameters",
                         "completions contain only parentheses for function calls"
                       ]
@@ -150,7 +168,11 @@
                       ]
                     },
                     "clangd.header-insertion-decorators": {
-                      "type": "boolean",
+                      "type": [
+                        "boolean",
+                        "null"
+                      ],
+                      "default": null,
                       "description": "Prepend a circular dot or space before the completion label, depending on whether an include line will be inserted or not"
                     },
                     "clangd.limit-references": {
@@ -196,7 +218,11 @@
                       "description": "Number of workers used for indexing and language server"
                     },
                     "clangd.malloc-trim": {
-                      "type": "boolean",
+                      "type": [
+                        "boolean",
+                        "null"
+                      ],
+                      "default": null,
                       "description": "Release memory periodically via malloc_trim(3)"
                     },
                     "clangd.pch-storage": {
@@ -213,7 +239,11 @@
                       ]
                     },
                     "clangd.enable-config": {
-                      "type": "boolean",
+                      "type": [
+                        "boolean",
+                        "null"
+                      ],
+                      "default": null,
                       "description": "Read user and project configuration from YAML files."
                     },
                     "clangd.log": {
@@ -239,7 +269,11 @@
                       "description": "Translates between client paths (as seen by a remote editor) and server paths (where clangd sees files on disk)."
                     },
                     "clangd.pretty": {
-                      "type": "boolean",
+                      "type": [
+                        "boolean",
+                        "null"
+                      ],
+                      "default": null,
                       "description": "Pretty-print JSON output"
                     }
                   },
