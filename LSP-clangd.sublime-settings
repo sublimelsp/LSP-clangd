@@ -102,4 +102,11 @@
         // Pretty-print JSON output
         "clangd.pretty": null,
     },
+    "experimental_capabilities": {
+        "textDocument": {
+            "completion": {
+                "editsNearCursor": true
+            }
+        }
+    }
 }
