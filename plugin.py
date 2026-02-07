@@ -1,9 +1,13 @@
+from __future__ import annotations
+
 import os
 import shutil
 import stat
 import sys
 import tempfile
 import zipfile
+from typing import cast, final
+from typing_extensions import override
 from urllib.request import urlopen
 
 import sublime
@@ -17,12 +21,13 @@ from LSP.plugin import (
     register_plugin,
     unregister_plugin,
 )
-from LSP.plugin.core.typing import List, Optional
+from LSP.plugin.core.protocol import ResponseError
 from LSP.plugin.core.views import text_document_identifier
+from LSP.protocol import TextDocumentIdentifier
 
 # Fix reloading for submodules
 for m in list(sys.modules.keys()):
-    if m.startswith(__package__ + ".") and m != __name__:
+    if m.startswith(str(__package__) + ".") and m != __name__:
         del sys.modules[m]
 
 from .modules.version import CLANGD_VERSION  # noqa: E402
@@ -73,18 +78,21 @@ def download_server(path: str):
     with tempfile.TemporaryDirectory() as tempdir:
         zip_path = os.path.join(tempdir, "server.zip")
 
-        sublime.status_message("{}: Downloading server...".format(SESSION_NAME))
+        sublime.status_message(f"{SESSION_NAME}: Downloading server...")
         download_file(clangd_download_url(), zip_path)
 
-        sublime.status_message("{}: Extracting server...".format(SESSION_NAME))
+        sublime.status_message(f"{SESSION_NAME}: Extracting server...")
         with zipfile.ZipFile(zip_path, "r") as zip_file:
             zip_file.extractall(tempdir)
 
-        shutil.move(os.path.join(tempdir, "clangd_{version}".format(version=VERSION_STRING)), path)
+        shutil.move(os.path.join(tempdir, f"clangd_{VERSION_STRING}"), path)
 
 
+@final
 class Clangd(AbstractPlugin):
+
     @classmethod
+    @override
     def name(cls) -> str:
         return SESSION_NAME
 
@@ -93,7 +101,7 @@ class Clangd(AbstractPlugin):
         return os.path.join(cls.storage_path(), STORAGE_DIR)
 
     @classmethod
-    def managed_clangd_path(cls) -> Optional[str]:
+    def managed_clangd_path(cls) -> str | None:
         binary_name = "clangd.exe" if sublime.platform() == "windows" else "clangd"
         path = os.path.join(cls.storage_subpath(), "clangd_{version}/bin/{binary_name}".format(version=VERSION_STRING, binary_name=binary_name))
         if os.path.exists(path):
@@ -101,8 +109,8 @@ class Clangd(AbstractPlugin):
         return None
 
     @classmethod
-    def system_clangd_path(cls) -> Optional[str]:
-        system_binary = get_settings().get("system_binary")
+    def system_clangd_path(cls) -> str | None:
+        system_binary = cast('str', get_settings().get("system_binary"))
         # Detect if clangd is installed or the command points to a valid binary.
         # Fallback, shutil.which has issues on Windows.
         system_binary_path = shutil.which(system_binary) or system_binary
@@ -111,7 +119,7 @@ class Clangd(AbstractPlugin):
         return system_binary_path
 
     @classmethod
-    def clangd_path(cls) -> Optional[str]:
+    def clangd_path(cls) -> str | None:
         """The command to start clangd without any configuration arguments"""
         binary_setting = get_settings().get("binary")
         if binary_setting == "system":
@@ -123,12 +131,14 @@ class Clangd(AbstractPlugin):
             return cls.system_clangd_path() or cls.managed_clangd_path()
 
     @classmethod
+    @override
     def needs_update_or_installation(cls) -> bool:
         if get_settings().get("binary") == "custom":
             return False
         return cls.clangd_path() is None
 
     @classmethod
+    @override
     def install_or_update(cls) -> None:
         # Binary cannot be set to custom because needs_update_or_installation
         # returns False in this case
@@ -159,16 +169,17 @@ class Clangd(AbstractPlugin):
         os.chmod(path, st.st_mode | stat.S_IEXEC)
 
     @classmethod
+    @override
     def on_pre_start(
         cls,
         window: sublime.Window,
         initiating_view: sublime.View,
-        workspace_folders: List[WorkspaceFolder],
+        workspace_folders: list[WorkspaceFolder],
         configuration: ClientConfig,
-    ) -> Optional[str]:
+    ) -> str | None:
 
         if get_settings().get("binary") == "custom":
-            clangd_base_command = configuration.init_options.get("custom_command")  # type: List[str]
+            clangd_base_command = cast('list[str]', configuration.init_options.get("custom_command"))
         else:
             clangd_path = cls.clangd_path()
             if not clangd_path:
@@ -189,25 +200,25 @@ class Clangd(AbstractPlugin):
             if isinstance(value, str) or isinstance(value, int):
                 configuration.command.append("{key}={value}".format(key=get_argument_for_setting(key), value=value))
             else:
-                raise TypeError("Type {} not supported for setting {}.".format(str(type(value)), key))
+                raise TypeError(f"Type {type(value)} not supported for setting {key}.")
         return None
 
 
+@final
 class LspClangdSwitchSourceHeader(LspTextCommand):
 
     session_name = SESSION_NAME
 
-    def run(self, edit):
+    @override
+    def run(self, edit: sublime.Edit) -> None:
         session = self.session_by_name(SESSION_NAME)
         if not session:
             return
-        session.send_request(
-            Request("textDocument/switchSourceHeader", text_document_identifier(self.view)),
-            self.on_response_async,
-            self.on_error_async,
-        )
+        request: Request[TextDocumentIdentifier, str] = Request("textDocument/switchSourceHeader",
+                                                                text_document_identifier(self.view))
+        session.send_request(request, self.on_response_async, self.on_error_async)
 
-    def on_response_async(self, response):
+    def on_response_async(self, response: str):
         if not response:
             sublime.status_message("{}: could not determine source/header".format(self.session_name))
             return
@@ -218,7 +229,7 @@ class LspClangdSwitchSourceHeader(LspTextCommand):
             return
         window.open_file(file_path)
 
-    def on_error_async(self, error):
+    def on_error_async(self, error: ResponseError):
         sublime.status_message("{}: could not switch to source/header: {}".format(self.session_name, error))
 
 
