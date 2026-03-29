@@ -37,8 +37,8 @@ STORAGE_DIR = "LSP-clangd"
 SETTINGS_FILENAME = "LSP-clangd.sublime-settings"
 GITHUB_DL_URL = 'https://github.com/clangd/clangd/releases/download/'\
                 + '{release_tag}/clangd-{platform}-{release_tag}.zip'
-# Options under `initializationOptions` that are prefixed with this prefix
-# aren't really `initializationOptions` but get converted to command line arguments
+# Options under `initialization_options` that are prefixed with this prefix
+# aren't really `initialization_options` but get converted to command line arguments
 # when this plugin starts the server.
 CLANGD_SETTING_PREFIX = "clangd."
 CLANGD_SETTING_TO_ARGUMENT = {
@@ -179,7 +179,7 @@ class Clangd(AbstractPlugin):
     ) -> str | None:
 
         if get_settings().get("binary") == "custom":
-            clangd_base_command = cast('list[str]', configuration.init_options.get("custom_command"))
+            clangd_base_command = cast('list[str]', configuration.initialization_options.get("custom_command"))
         else:
             clangd_path = cls.clangd_path()
             if not clangd_path:
@@ -190,7 +190,7 @@ class Clangd(AbstractPlugin):
         # reset the command to prevent adding an argument multiple times
         configuration.command = clangd_base_command.copy()
 
-        for key, value in configuration.init_options.get("clangd").items():
+        for key, value in configuration.initialization_options.get("clangd").items():
             if value is None:
                 continue  # Use clangd default
 
