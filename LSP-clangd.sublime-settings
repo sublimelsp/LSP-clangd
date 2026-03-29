@@ -7,7 +7,7 @@
     // "system": Prefers the system binary below
     // "auto": Prefers the system binary but falls back to GitHub without user intervention
     // "github": Prefers the latest tested release from GitHub
-    // "custom": Use the custom command in the initializationOptions below
+    // "custom": Use the custom command in the initialization_options below
     "binary": "system",
     // The binary to use when `binary` is set to `system`.
     "system_binary": "clangd",
@@ -18,7 +18,7 @@
     "selector": "source.c | source.c++ | source.objc | source.objc++ | source.cuda-c++",
     // Makes the auto-complete not trigger twice when writing a -> or when writing ::
     "auto_complete_selector": "punctuation.accessor | (meta.preprocessor.include string - punctuation.definition.string.end)",
-    "initializationOptions": {
+    "initialization_options": {
         // A custom command to start clangd. Set `binary` to `custom` to use this command.
         // The command-line arguments which are generated from the `clang.*` settings are appended to this command.
         // This can be used for MSYS2's clangd for example.

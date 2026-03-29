@@ -24,7 +24,7 @@
                     "Prefers the system binary found in path",
                     "Prefers the system binary but falls back to GitHub without user intervention",
                     "Prefers the latest tested release from GitHub",
-                    "Use the custom command in the initializationOptions below",
+                    "Use the custom command in the initialization_options below",
                   ],
                 },
                 "system_binary": {
@@ -32,7 +32,7 @@
                   "default": "clangd",
                   "markdownDescription": "The binary to use when `binary` is set to `system`."
                 },
-                "initializationOptions": {
+                "initialization_options": {
                   "additionalProperties": false,
                   "properties": {
                     "custom_command": {
