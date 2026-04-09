@@ -7,7 +7,6 @@ import sys
 import tempfile
 import zipfile
 from typing import cast, final
-from typing_extensions import override
 from urllib.request import urlopen
 
 import sublime
@@ -24,6 +23,7 @@ from LSP.plugin import (
 from LSP.plugin.core.protocol import ResponseError
 from LSP.plugin.core.views import text_document_identifier
 from LSP.protocol import TextDocumentIdentifier
+from typing_extensions import override
 
 # Fix reloading for submodules
 for m in list(sys.modules.keys()):
