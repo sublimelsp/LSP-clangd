@@ -1,0 +1,19 @@
+[tool.pyright]
+pythonVersion = "3.8"
+reportMissingModuleSource = "none"
+typeCheckingMode = "standard"
+
+[tool.ruff]
+line-length = 120
+target-version = "py38"
+
+[tool.ruff.lint]
+# Enable preview rules.
+preview = true
+select = ["F401", "I"]
+
+[tool.ruff.lint.isort]
+case-sensitive = true
+combine-as-imports = true
+order-by-type = false
+required-imports = ["from __future__ import annotations"]
