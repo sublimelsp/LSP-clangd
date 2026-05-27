@@ -1,12 +1,13 @@
 from __future__ import annotations
 
 import os
+import re
 import shutil
 import stat
 import sys
 import tempfile
 import zipfile
-from typing import cast, final
+from typing import Any, cast, final
 from urllib.request import urlopen
 
 import sublime
@@ -15,6 +16,7 @@ from LSP.plugin import (
     ClientConfig,
     LspTextCommand,
     Request,
+    Response,
     WorkspaceFolder,
     parse_uri,
     register_plugin,
@@ -202,6 +204,13 @@ class Clangd(AbstractPlugin):
             else:
                 raise TypeError(f"Type {type(value)} not supported for setting {key}.")
         return None
+
+    def on_server_response_async(self, method: str, response: Response[Any]) -> None:
+        if method == "textDocument/hover" and isinstance(response.result, dict):
+            contents = response.result.get("contents")
+            if isinstance(contents, dict) and contents.get("kind") == "markdown":
+                content = re.sub("[ ]{2,}\n-", "\n\n-", contents["value"])
+                contents["value"] = content
 
 
 @final
