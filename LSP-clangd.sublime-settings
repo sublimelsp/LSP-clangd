@@ -11,9 +11,6 @@
     "binary": "system",
     // The binary to use when `binary` is set to `system`.
     "system_binary": "clangd",
-    // Generated internally because clangd is configured via command line arguments.
-    // DO NOT CHANGE THIS, use `system_binary` or `custom_command` instead.
-    "command": [],
     // Enable clangd for C/C++ and Objective-C/C++
     "selector": "source.c | source.c++ | source.objc | source.objc++ | source.cuda-c++",
     // Makes the auto-complete not trigger twice when writing a -> or when writing ::
@@ -108,5 +105,8 @@
                 "editsNearCursor": true
             }
         }
-    }
+    },
+    // Generated internally because clangd is configured via command line arguments.
+    // DO NOT CHANGE THIS, use `system_binary` or `custom_command` instead.
+    "command": [],
 }

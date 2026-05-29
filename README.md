@@ -38,7 +38,7 @@ Here are some ways to configure the package and the language server.
   {
      "settings": {
         "LSP": {
-           "clangd": {
+           "LSP-clangd": {
               "initialization_options": {
                 // Put your settings here eg.
                 // "clangd.header-insertion": "iwyu",
