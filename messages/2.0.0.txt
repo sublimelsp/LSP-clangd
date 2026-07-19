@@ -1,6 +1,6 @@
 !!WARNING!!
 
-The key used to override LSP-clang settings in project settings has changed from "clang" to "LSP-clang".
+The key used to override LSP-clangd settings in project settings has changed from "clangd" to "LSP-clangd".
 
 If you are using project-specific overrides for LSP-clang then you have to change the key for it to apply.
 
