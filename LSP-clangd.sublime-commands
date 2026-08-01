@@ -11,4 +11,12 @@
         "caption": "LSP-clangd: Switch to Source/Header",
         "command": "lsp_clangd_switch_source_header",
     },
+    {
+        "caption": "LSP-clangd: View Syntax Tree",
+        "command": "lsp_clangd_view_syntax_tree",
+    },
+    {
+        "caption": "LSP-clangd: Memory Usage",
+        "command": "lsp_clangd_memory_usage",
+    }
 ]

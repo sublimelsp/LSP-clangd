@@ -40,14 +40,6 @@
                       "default": [],
                       "markdownDescription": "A custom command to start clangd. Set `binary` to `custom` to use this command. The command-line arguments which are generated from the `clang.*` settings are appended to this command."
                     },
-                    "clangdFileStatus": {
-                      "type": "boolean",
-                      "description": "Enables receiving textDocument/clangd.fileStatus notifications.",
-                      "enum": [
-                        false
-                      ],
-                      "default": false,
-                    },
                     "fallbackFlags": {
                       "type": "array",
                       "default": [],

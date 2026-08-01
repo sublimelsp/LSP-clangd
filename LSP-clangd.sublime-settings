@@ -15,20 +15,23 @@
     "selector": "source.c | source.c++ | source.objc | source.objc++ | source.cuda-c++",
     // Makes the auto-complete not trigger twice when writing a -> or when writing ::
     "auto_complete_selector": "punctuation.accessor | (meta.preprocessor.include string - punctuation.definition.string.end)",
+    // Show the status of the language server in the bottom Status Bar.
+    "show_file_status": true,
     "initialization_options": {
         // A custom command to start clangd. Set `binary` to `custom` to use this command.
         // The command-line arguments which are generated from the `clang.*` settings are appended to this command.
         // This can be used for MSYS2's clangd for example.
         "custom_command": [],
 
-        // @see https://clangd.llvm.org/extensions#file-status
-        // Enables receiving textDocument/clangd.fileStatus notifications.
-        // -- unsupported --
-        "clangdFileStatus": false,
-        // @see https://clangd.llvm.org/extensions#compilation-commands
+        // see: https://clangd.llvm.org/extensions#compilation-commands
         // Controls the flags used when no specific compile command is found.
         // The compile command will be approximately clang $FILE $fallbackFlags in this case.
         "fallbackFlags": [],
+
+        // see: https://clangd.llvm.org/extensions.html#file-status
+        // Shows the current status of the language server in the bottom left.
+        // Set to false to disable it.
+        "clangdFileStatus": true,
 
         // clangd options. Set to null to keep the clangd default.
         // These options are converted to commandline options when clangd is startet.
@@ -103,6 +106,12 @@
         "textDocument": {
             "completion": {
                 "editsNearCursor": true
+            },
+            // see: https://clangd.llvm.org/extensions.html#inactive-regions
+            // Displays a non-interactive annotation, with the word "inactive", on lines that are considered inactive
+            // due to the current compilation flags and preprocessor macro regions.
+            "inactiveRegionsCapabilities": {
+                "inactiveRegions": true
             }
         }
     },

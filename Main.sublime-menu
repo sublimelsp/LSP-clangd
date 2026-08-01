@@ -1,18 +1,32 @@
 [
   {
+    "id": "tools",
+    "children": [
+      {
+        "id": "lsp",
+        "children": [
+          {
+            "caption": "clangd: View Syntax Tree",
+            "command": "lsp_clangd_view_syntax_tree",
+          },
+          {
+            "caption": "clangd: Memory Usage",
+            "command": "lsp_clangd_memory_usage",
+          },
+        ]
+      }
+    ]
+  },
+  {
     "id": "preferences",
     "children": [
       {
-        "caption": "Package Settings",
-        "mnemonic": "P",
         "id": "package-settings",
         "children": [
           {
-            "caption": "LSP",
             "id": "lsp-settings",
             "children": [
               {
-                "caption": "Servers",
                 "id": "lsp-servers",
                 "children": [
                   {

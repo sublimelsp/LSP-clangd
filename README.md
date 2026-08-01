@@ -29,6 +29,7 @@ If your build directory is equivalent to the root of the project or `<project_ro
 
 Here are some ways to configure the package and the language server.
 
+- (Editor-agnostic) maintaining a [.clangd YAML file](https://clangd.llvm.org/config.html) in your project
 - From `Preferences > Package Settings > LSP > Servers > LSP-clangd`
 - From the command palette: `Preferences: LSP-clangd Settings`
 - Project-specific configuration.
