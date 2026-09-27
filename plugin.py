@@ -22,9 +22,9 @@ from LSP.plugin import (
     Request,
     ServerResponse,
     parse_uri,
+    text_document_identifier,
 )
 from LSP.plugin.core.protocol import ResponseError
-from LSP.plugin.core.views import text_document_identifier
 from LSP.protocol import TextDocumentIdentifier
 from typing_extensions import override
 
