@@ -33,7 +33,7 @@ GITHUB_DL_URL = 'https://github.com/clangd/clangd/releases/download/'\
 CLANGD_SETTING_TO_ARGUMENT = {
     "number-workers": "-j"
 }
-CLANGD_VERSION = "22.1.6"
+CLANGD_VERSION = "23.1.0"
 """The clangd release tag. You can find them on https://github.com/clangd/clangd/releases"""
 
 
