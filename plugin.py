@@ -4,7 +4,6 @@ import os
 import re
 import shutil
 import stat
-import sys
 import tempfile
 import zipfile
 from os import PathLike
@@ -28,20 +27,14 @@ from LSP.plugin.core.protocol import ResponseError
 from LSP.protocol import TextDocumentIdentifier
 from typing_extensions import override
 
-# Fix reloading for submodules
-for m in list(sys.modules.keys()):
-    if m.startswith(str(__package__) + ".") and m != __name__:
-        del sys.modules[m]
-
-from .modules.version import CLANGD_VERSION  # noqa: E402
-
 SETTINGS_FILENAME = "LSP-clangd.sublime-settings"
 GITHUB_DL_URL = 'https://github.com/clangd/clangd/releases/download/'\
                 + '{release_tag}/clangd-{platform}-{release_tag}.zip'
 CLANGD_SETTING_TO_ARGUMENT = {
     "number-workers": "-j"
 }
-VERSION_STRING = ".".join(str(s) for s in CLANGD_VERSION)
+CLANGD_VERSION = "22.1.6"
+"""The clangd release tag. You can find them on https://github.com/clangd/clangd/releases"""
 
 
 def get_argument_for_setting(key: str) -> str:
@@ -61,7 +54,7 @@ def clangd_download_url():
     platform = sublime.platform()
     if platform == "osx":
         platform = "mac"
-    return GITHUB_DL_URL.format(release_tag=VERSION_STRING, platform=platform)
+    return GITHUB_DL_URL.format(release_tag=CLANGD_VERSION, platform=platform)
 
 
 def download_file(url: str, file: str) -> None:
@@ -78,7 +71,7 @@ def download_server(path: str | PathLike[str]):
         with zipfile.ZipFile(zip_path, "r") as zip_file:
             zip_file.extractall(tempdir)
 
-        shutil.move(os.path.join(tempdir, f"clangd_{VERSION_STRING}"), path)
+        shutil.move(os.path.join(tempdir, f"clangd_{CLANGD_VERSION}"), path)
 
 
 @final
@@ -164,7 +157,7 @@ class Clangd(LspPlugin):
     @classmethod
     def managed_clangd_path(cls) -> Path | None:
         binary_name = "clangd.exe" if sublime.platform() == "windows" else "clangd"
-        path = cls.plugin_storage_path / f"clangd_{VERSION_STRING}" / "bin" / binary_name
+        path = cls.plugin_storage_path / f"clangd_{CLANGD_VERSION}" / "bin" / binary_name
         return path if path.exists() else None
 
     def on_server_response_async(self, response: ServerResponse) -> None:
