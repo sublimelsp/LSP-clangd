@@ -49,6 +49,9 @@ Here are some ways to configure the package and the language server.
   }
   ```
 
+> [!NOTE]
+> Since LSP-clangd 2.0.0 the key used in project settings is `LSP-clangd`. Overrides under the old `clangd` key are ignored.
+
 ### Using a project-specific clangd binary
 
 Top-level settings like `binary` can also be overridden per project. For example, to use a clangd binary bundled with the project's toolchain:
@@ -69,9 +72,6 @@ Top-level settings like `binary` can also be overridden per project. For example
 ```
 
 Variables such as `${folder}` (the first folder of the project) are expanded in `custom_command`. The `clangd.*` settings are still appended to the custom command as command-line arguments.
-
-> [!NOTE]
-> Since LSP-clangd 2.0.0 the key used in project settings is `LSP-clangd`. Overrides under the old `clangd` key are ignored.
 
 ## Sublime Commands
 
