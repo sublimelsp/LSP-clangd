@@ -106,6 +106,15 @@
             }
         }
     },
+    // Scopes for semantic token types that are specific to clangd.
+    // Only used when the LSP "semantic_highlighting" setting is enabled.
+    // See documentation at https://lsp.sublimetext.io/features/#semantic-highlighting
+    "semantic_tokens": {
+        // C++20 concepts, mapped like the "type" token type.
+        "concept": "storage.type.concept.lsp",
+        "concept.declaration": "entity.name.type.concept.lsp",
+        "concept.definition": "entity.name.type.concept.lsp",
+    },
     // Generated internally because clangd is configured via command line arguments.
     // DO NOT CHANGE THIS, use `system_binary` or `custom_command` instead.
     "command": [],
