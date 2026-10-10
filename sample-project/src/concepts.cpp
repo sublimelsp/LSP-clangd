@@ -14,7 +14,7 @@ namespace sample {
 template <typename T>
 concept Greetable = requires(const T& value) {
     // Concepts from the standard library (also std::integral below) have the "defaultLibrary" modifier.
-    // Expected scope: storage.type.concept.lsp meta.semantic-token.concept.defaultlibrary.lsp
+    // Expected scope: support.type.concept.lsp meta.semantic-token.concept.defaultlibrary.lsp
     { value.greet() } -> std::convertible_to<std::string>;
 };
 

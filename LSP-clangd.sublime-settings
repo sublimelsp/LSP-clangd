@@ -113,6 +113,7 @@
         // C++20 concepts, mapped like the "type" token type.
         "concept": "storage.type.concept.lsp",
         "concept.declaration": "entity.name.type.concept.lsp",
+        "concept.defaultLibrary": "support.type.concept.lsp",
         "concept.definition": "entity.name.type.concept.lsp",
     },
     // Generated internally because clangd is configured via command line arguments.
