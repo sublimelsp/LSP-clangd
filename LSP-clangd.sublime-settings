@@ -23,8 +23,8 @@
 
         // @see https://clangd.llvm.org/extensions#file-status
         // Enables receiving textDocument/clangd.fileStatus notifications.
-        // -- unsupported --
-        "clangdFileStatus": false,
+        // The state of the file (for example "parsing includes") is shown in the status bar.
+        "clangdFileStatus": true,
         // @see https://clangd.llvm.org/extensions#compilation-commands
         // Controls the flags used when no specific compile command is found.
         // The compile command will be approximately clang $FILE $fallbackFlags in this case.

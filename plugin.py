@@ -8,7 +8,7 @@ import tempfile
 import zipfile
 from os import PathLike
 from pathlib import Path
-from typing import cast, final
+from typing import TypedDict, cast, final
 from urllib.request import urlopen
 
 import sublime
@@ -20,11 +20,12 @@ from LSP.plugin import (
     PluginStartError,
     Request,
     ServerResponse,
+    notification_handler,
     parse_uri,
     text_document_identifier,
 )
 from LSP.plugin.core.protocol import ResponseError
-from LSP.protocol import TextDocumentIdentifier
+from LSP.protocol import DocumentUri, TextDocumentIdentifier
 from typing_extensions import override
 
 SETTINGS_FILENAME = "LSP-clangd.sublime-settings"
@@ -97,6 +98,14 @@ def download_server(path: str | PathLike[str]):
             zip_file.extractall(tempdir)
 
         shutil.move(os.path.join(tempdir, f"clangd_{CLANGD_VERSION}"), path)
+
+
+class FileStatus(TypedDict):
+    """Parameters of the `textDocument/clangd.fileStatus` notification."""
+    uri: DocumentUri
+    """The text document's URI."""
+    state: str
+    """The human-readable state of the file, for example "parsing includes" or "idle"."""
 
 
 @final
@@ -196,6 +205,13 @@ class Clangd(LspPlugin):
             if isinstance(contents, dict) and contents.get("kind") == "markdown":
                 content = re.sub("[ ]{2,}\n-", "\n\n-", contents["value"])
                 contents["value"] = content
+
+    @notification_handler("textDocument/clangd.fileStatus")
+    def on_file_status(self, params: FileStatus) -> None:
+        if (session := self.weaksession()) and (sb := session.get_session_buffer_for_uri_async(params["uri"])):
+            state = "" if params["state"] == "idle" else params["state"]
+            for session_view in sb.session_views:
+                session.config.set_view_status(session_view.view, state)
 
 
 @final
