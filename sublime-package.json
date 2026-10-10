@@ -42,11 +42,8 @@
                     },
                     "clangdFileStatus": {
                       "type": "boolean",
-                      "description": "Enables receiving textDocument/clangd.fileStatus notifications.",
-                      "enum": [
-                        false
-                      ],
-                      "default": false,
+                      "description": "Enables receiving textDocument/clangd.fileStatus notifications. The state of the file (for example \"parsing includes\") is shown in the status bar.",
+                      "default": true,
                     },
                     "fallbackFlags": {
                       "type": "array",
