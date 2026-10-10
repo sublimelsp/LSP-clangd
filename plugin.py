@@ -5,7 +5,6 @@ import os
 import re
 import shutil
 import stat
-import sys
 import tempfile
 import zipfile
 from datetime import datetime
@@ -40,19 +39,13 @@ from LSP.plugin.core.views import (
 from LSP.protocol import Range, TextDocumentIdentifier
 from typing_extensions import override
 
-# Fix reloading for submodules
-for m in list(sys.modules.keys()):
-    if m.startswith(str(__package__) + ".") and m != __name__:
-        del sys.modules[m]
-
-from .modules.version import CLANGD_VERSION  # noqa: E402
-
 SETTINGS_FILENAME = "LSP-clangd.sublime-settings"
 GITHUB_DL_URL = (
     "https://github.com/clangd/clangd/releases/download/" + "{release_tag}/clangd-{platform}-{release_tag}.zip"
 )
 CLANGD_SETTING_TO_ARGUMENT = {"number-workers": "-j"}
-VERSION_STRING = ".".join(str(s) for s in CLANGD_VERSION)
+CLANGD_VERSION = "23.1.0"
+"""The clangd release tag. You can find them on https://github.com/clangd/clangd/releases"""
 INACTIVE_REGIONS_KEY = "LSP-clangd-inactive-regions"
 
 
@@ -123,11 +116,36 @@ def set_setting_and_save(key: str, value: str) -> None:
     return sublime.save_settings(SETTINGS_FILENAME)
 
 
+def project_lsp_settings(window: sublime.Window | None, config_name: str) -> tuple[dict, dict] | None:
+    """Returns the project data and the config overrides within it, if the project defines any."""
+    project_data = window.project_data() if window else None
+    if not isinstance(project_data, dict):
+        return None
+    settings = project_data.get("settings")
+    lsp_settings = settings.get("LSP") if isinstance(settings, dict) else None
+    overrides = lsp_settings.get(config_name) if isinstance(lsp_settings, dict) else None
+    return (project_data, overrides) if isinstance(overrides, dict) else None
+
+
+def get_project_lsp_setting(window: sublime.Window | None, config_name: str, key: str) -> bool:
+    project_settings = project_lsp_settings(window, config_name)
+    return project_settings is not None and key in project_settings[1]
+
+
+def set_project_lsp_setting_and_save(window: sublime.Window, config_name: str, key: str, value: str) -> None:
+    project_settings = project_lsp_settings(window, config_name)
+    if project_settings is None:
+        return
+    project_data, overrides = project_settings
+    overrides[key] = value
+    window.set_project_data(project_data)
+
+
 def clangd_download_url():
     platform = sublime.platform()
     if platform == "osx":
         platform = "mac"
-    return GITHUB_DL_URL.format(release_tag=VERSION_STRING, platform=platform)
+    return GITHUB_DL_URL.format(release_tag=CLANGD_VERSION, platform=platform)
 
 
 def download_file(url: str, file: str) -> None:
@@ -144,7 +162,7 @@ def download_server(path: str | PathLike[str]):
         with zipfile.ZipFile(zip_path, "r") as zip_file:
             zip_file.extractall(tempdir)
 
-        shutil.move(os.path.join(tempdir, f"clangd_{VERSION_STRING}"), path)
+        shutil.move(os.path.join(tempdir, f"clangd_{CLANGD_VERSION}"), path)
 
 
 @final
@@ -158,7 +176,7 @@ class Clangd(LspPlugin):
         else:
             clangd_path = cls.clangd_path(config)
             if clangd_path is None:
-                cls.install_clangd(config)
+                cls.install_clangd(config, context.view.window())
             clangd_path = cls.clangd_path(config)
             if clangd_path is None:
                 raise PluginStartError("clangd is currently not installed")
@@ -179,18 +197,22 @@ class Clangd(LspPlugin):
                 raise TypeError(f"[LSP-clangd] Type {type(value)} not supported for setting {key}.")
 
     @classmethod
-    def install_clangd(cls, configuration: ClientConfig) -> None:
+    def install_clangd(cls, configuration: ClientConfig, window: sublime.Window | None) -> None:
         # Binary cannot be set to custom because needs_update_or_installation
         # returns False in this case
         if configuration.root_settings.get("binary") == "system":
-            ans = sublime.ok_cancel_dialog(
-                "clangd was not found in your path. Would you like to auto-install clangd from GitHub?",
-                ok_title="Install",
-            )
-            if ans == sublime.DIALOG_YES:
-                set_setting_and_save("binary", "auto")
-            else:  # sublime.DIALOG_NO or sublime.DIALOG_CANCEL
+            in_project = get_project_lsp_setting(window, configuration.name, "binary")
+            settings_location = "project settings" if in_project else "LSP-clangd settings"
+            answer = sublime.ok_cancel_dialog(
+                "clangd was not found in your path. Would you like to auto-install clangd from GitHub?\n\n"
+                f"The \"binary\" setting will be changed to \"auto\" in the {settings_location}.",
+                ok_title="Install")
+            if not answer:
                 raise PluginStartError("clangd is currently not installed")
+            if window and in_project:
+                set_project_lsp_setting_and_save(window, configuration.name, "binary", "auto")
+            else:
+                set_setting_and_save("binary", "auto")
 
         # At this point clangd is not installed and
         # binary setting is "github" or "auto" -> perform installation
@@ -230,7 +252,7 @@ class Clangd(LspPlugin):
     @classmethod
     def managed_clangd_path(cls) -> Path | None:
         binary_name = "clangd.exe" if sublime.platform() == "windows" else "clangd"
-        path = cls.plugin_storage_path / f"clangd_{VERSION_STRING}" / "bin" / binary_name
+        path = cls.plugin_storage_path / f"clangd_{CLANGD_VERSION}" / "bin" / binary_name
         return path if path.exists() else None
 
     async def on_server_response(self, response: ServerResponse) -> None:

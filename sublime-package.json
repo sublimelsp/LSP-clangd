@@ -280,7 +280,8 @@
             {
               "$ref": "sublime://settings/LSP-clangd#/definitions/PluginConfig"
             }
-          ]
+          ],
+          "unevaluatedProperties": false
         }
       },
       {
@@ -293,8 +294,16 @@
               "properties": {
                 "LSP": {
                   "properties": {
-                    "clangd": {
-                      "$ref": "sublime://settings/LSP-clangd#/definitions/PluginConfig"
+                    "LSP-clangd": {
+                      "allOf": [
+                        {
+                          "$ref": "sublime://settings/LSP-plugin-base"
+                        },
+                        {
+                          "$ref": "sublime://settings/LSP-clangd#/definitions/PluginConfig"
+                        }
+                      ],
+                      "unevaluatedProperties": false
                     }
                   }
                 }

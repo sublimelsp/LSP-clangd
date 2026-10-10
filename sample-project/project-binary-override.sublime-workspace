@@ -1,0 +1,2577 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"cast",
+				"cast"
+			],
+			[
+				"syn",
+				"syntax"
+			],
+			[
+				"textdocuiden",
+				"text_document_identifier"
+			],
+			[
+				"type",
+				"\"type\""
+			],
+			[
+				"plu",
+				"plugin_storage_path"
+			],
+			[
+				"Dict",
+				"Dict"
+			],
+			[
+				"typ",
+				"typeCheckingMode"
+			],
+			[
+				"TypeAlias",
+				"TypeAlias"
+			],
+			[
+				"isfi",
+				"is_file"
+			],
+			[
+				"write",
+				"write_text"
+			],
+			[
+				"read",
+				"read_text"
+			],
+			[
+				"stat",
+				"set_view_status"
+			],
+			[
+				"Error",
+				"Error"
+			],
+			[
+				"send",
+				"send_request_task"
+			],
+			[
+				"stor",
+				"storage_path"
+			],
+			[
+				"writ",
+				"write_text"
+			],
+			[
+				"sup",
+				"plugin_storage_path"
+			],
+			[
+				"sublime_l",
+				"sublime_plugin"
+			],
+			[
+				"textpo",
+				"text_point_utf16"
+			],
+			[
+				"vie",
+				"views"
+			],
+			[
+				"Raw",
+				"RawElement"
+			],
+			[
+				"activi",
+				"active_view"
+			],
+			[
+				"Union",
+				"Union"
+			],
+			[
+				"filena",
+				"file_name"
+			],
+			[
+				"Erro",
+				"Error"
+			],
+			[
+				"get",
+				"get_sessions"
+			],
+			[
+				"TypedDict",
+				"TypedDict"
+			],
+			[
+				"di",
+				"'workspace/diagnostic'"
+			],
+			[
+				"new",
+				"newText"
+			],
+			[
+				"Snipp",
+				"SnippetTextEdit"
+			],
+			[
+				"serverver",
+				"SERVER_VERSION"
+			],
+			[
+				"indent",
+				"indent_level="
+			],
+			[
+				"ini",
+				"__init__"
+			],
+			[
+				"shut",
+				"shutil"
+			],
+			[
+				"iniop",
+				"initialization_options"
+			],
+			[
+				"dep",
+				"\"deprecationMessage\""
+			],
+			[
+				"asscal",
+				"assert_called_once_with"
+			],
+			[
+				"assert",
+				"assert_called_once_with"
+			],
+			[
+				"sublime_text_3",
+				"\"sublime_text_38\""
+			],
+			[
+				"curr",
+				"current_frame"
+			],
+			[
+				"current",
+				"current_frame"
+			],
+			[
+				"tra",
+				"trace"
+			],
+			[
+				"work",
+				"workspace_folders"
+			],
+			[
+				"extra",
+				"extraPaths"
+			],
+			[
+				"override",
+				"override"
+			],
+			[
+				"sublime_text",
+				"\"sublime_text_314\""
+			],
+			[
+				"_cl",
+				"_cleanup"
+			],
+			[
+				"regi",
+				"_registration"
+			],
+			[
+				"subset",
+				"sublime_settings"
+			],
+			[
+				"ext",
+				"external_settings_registrations"
+			],
+			[
+				"setinreg",
+				"_settings_registration"
+			],
+			[
+				"SETTINGS",
+				"SERVER_SETTING_ANALYSIS_EXTRAPATHS"
+			],
+			[
+				"on_pre",
+				"on_pre_send_response_async"
+			],
+			[
+				"wri",
+				"write_text"
+			],
+			[
+				"Conf",
+				"ConfigurationSection"
+			],
+			[
+				"configura",
+				"configuration"
+			],
+			[
+				"Config",
+				"ConfigurationSection"
+			],
+			[
+				"Confi",
+				"ConfigurationSection"
+			],
+			[
+				"resol",
+				"resolve_extra_paths_"
+			],
+			[
+				"node",
+				"node_version_requirement="
+			],
+			[
+				"onser",
+				"on_server_installed"
+			],
+			[
+				"com",
+				"compiled_json_languageservice_directory"
+			],
+			[
+				"init",
+				"initialization_options"
+			],
+			[
+				"runcomm",
+				"run_command_sync"
+			],
+			[
+				"descrip",
+				"\"description\""
+			],
+			[
+				"descri",
+				"\"description\""
+			],
+			[
+				"desc",
+				"\"description\""
+			],
+			[
+				"filep",
+				"file_path"
+			],
+			[
+				"item",
+				"\"items\""
+			],
+			[
+				"Repos",
+				"RepositoryContext"
+			],
+			[
+				"pr",
+				"\"properties\""
+			],
+			[
+				"mark",
+				"\"markdownEnumDescriptions\""
+			],
+			[
+				"enum",
+				"\"enum\""
+			],
+			[
+				"prop",
+				"\"properties\""
+			],
+			[
+				"ex",
+				"extraPaths"
+			],
+			[
+				"iscou",
+				"iscoroutinefunction"
+			],
+			[
+				"over",
+				"overload"
+			],
+			[
+				"Instext",
+				"InsertTextFormat"
+			],
+			[
+				"sess",
+				"session_name"
+			],
+			[
+				"auto",
+				"auto_complete_selector"
+			],
+			[
+				"fina",
+				"final"
+			],
+			[
+				"selecnod",
+				"selected_node_index"
+			],
+			[
+				"foc",
+				"focus_sheet"
+			],
+			[
+				"selected_node_",
+				"selected_node_id"
+			],
+			[
+				"parent",
+				"parent_node_id="
+			],
+			[
+				"coll",
+				"collapse_item"
+			],
+			[
+				"label",
+				"label_html"
+			],
+			[
+				"isf",
+				"is_file"
+			],
+			[
+				"dialo",
+				"ok_cancel_dialog"
+			],
+			[
+				"dia",
+				"ok_cancel_dialog"
+			],
+			[
+				"classm",
+				"classmethod"
+			],
+			[
+				"serverdire",
+				"server_directory_path"
+			],
+			[
+				"continue",
+				"continue_after_response"
+			],
+			[
+				"padded",
+				"padded_length"
+			],
+			[
+				"Point",
+				"Point"
+			],
+			[
+				"settime",
+				"set_timeout_async"
+			],
+			[
+				"Server",
+				"ServerRange"
+			],
+			[
+				"Rang",
+				"Range"
+			],
+			[
+				"skip",
+				"skip_npm_install="
+			],
+			[
+				"send_request",
+				"send_request_task"
+			],
+			[
+				"Ltes",
+				"LTeXLsPlus"
+			],
+			[
+				"req",
+				"required_node_version="
+			],
+			[
+				"offset",
+				"offset_to_text_position"
+			],
+			[
+				"verbo",
+				"verbosity_level"
+			],
+			[
+				"sessbuff",
+				"get_session_buffer_for_uri_async"
+			],
+			[
+				"NotRequired",
+				"NotRequired"
+			],
+			[
+				"nod",
+				"node_version_requirement="
+			],
+			[
+				"posii",
+				"position_to_offset"
+			],
+			[
+				"TypeDic",
+				"TypedDict"
+			],
+			[
+				"status",
+				"status_to_text"
+			],
+			[
+				"session",
+				"session_buffer"
+			],
+			[
+				"sessbuf",
+				"get_session_buffer_for_uri_async"
+			],
+			[
+				"set",
+				"set_view_status"
+			],
+			[
+				"verbos",
+				"verbosity_level"
+			],
+			[
+				"can",
+				"\"canIncreaseVerbosity\""
+			],
+			[
+				"onhore",
+				"on_hover_response"
+			],
+			[
+				"Hoverpara",
+				"HoverParamsWithVerbosity"
+			],
+			[
+				"on",
+				"on_session_initialize"
+			],
+			[
+				"Capa",
+				"ClientCapabilities"
+			],
+			[
+				"hoverpar",
+				"hover_params"
+			],
+			[
+				"ver",
+				"verbosityLevel"
+			],
+			[
+				"verbosi",
+				"verbosity_level"
+			],
+			[
+				"hoverpara",
+				"hover_params_with_verbosity"
+			],
+			[
+				"working",
+				"working_directory"
+			],
+			[
+				"Direc",
+				"DirectoryItem"
+			],
+			[
+				"Patt",
+				"PatternItem"
+			],
+			[
+				"Typedic",
+				"TypedDict"
+			],
+			[
+				"StrEnu",
+				"StrEnum"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/greeter.cpp",
+			"file_size": 534,
+			"file_write_time": 134361198802080279,
+			"settings":
+			{
+				"buffer_size": 534,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 389.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"eidpr",
+				"Project: Edit Project"
+			],
+			[
+				"runscr",
+				"LSP-epher: Run Script"
+			],
+			[
+				"ephrun",
+				"LSP-epher: Run Script"
+			],
+			[
+				"rest",
+				"LSP: Restart Server"
+			],
+			[
+				"lspeph",
+				"Preferences: LSP-epher Settings"
+			],
+			[
+				"troubl",
+				"LSP: Troubleshoot Server"
+			],
+			[
+				"rensy",
+				"LSP: Rename Symbol"
+			],
+			[
+				"lsprena",
+				"LSP: Rename Path"
+			],
+			[
+				"lspren",
+				"LSP: Rename Symbol"
+			],
+			[
+				"lsprenam",
+				"LSP: Rename Path"
+			],
+			[
+				"lspclang",
+				"Preferences: LSP-clangd Settings"
+			],
+			[
+				"lspang",
+				"Preferences: LSP-angular Settings"
+			],
+			[
+				"enapac",
+				"Package Control: Enable Package"
+			],
+			[
+				"rmeovpac",
+				"Package Control: Remove Package"
+			],
+			[
+				"instapa",
+				"Package Control: Install Package"
+			],
+			[
+				"lspangu",
+				"Preferences: LSP-angular Settings"
+			],
+			[
+				"ghopre",
+				"github: open repo"
+			],
+			[
+				"troub",
+				"LSP: Troubleshoot Server"
+			],
+			[
+				"reviewpull",
+				"github: review pull request (show: all)"
+			],
+			[
+				"dispac",
+				"Package Control: Disable Package"
+			],
+			[
+				"dissync",
+				"Side Bar: Disable Syncing"
+			],
+			[
+				"lspserver",
+				"Preferences: LSP Server Configurations"
+			],
+			[
+				"ghof",
+				"github: open file in browser"
+			],
+			[
+				"lspjdt",
+				"Preferences: LSP-jdtls Settings"
+			],
+			[
+				"crepau",
+				"github: create pull request"
+			],
+			[
+				"lspruntest",
+				"LSP-jdtls: Run Test Class"
+			],
+			[
+				"runtest",
+				"LSP-jdtls: Run Test Class"
+			],
+			[
+				"rensym",
+				"LSP: Rename Symbol"
+			],
+			[
+				"instap",
+				"Package Control: Install Package"
+			],
+			[
+				"removpac",
+				"Package Control: Remove Package"
+			],
+			[
+				"enap",
+				"Package Control: Enable Package"
+			],
+			[
+				"instapac",
+				"Package Control: Install Package"
+			],
+			[
+				"lspmeta",
+				"LSP-metals: Settings"
+			],
+			[
+				"lspdeno",
+				"Preferences: LSP-Deno Settings"
+			],
+			[
+				"ghore",
+				"github: open repo"
+			],
+			[
+				"lspmetal",
+				"LSP-metals: Settings"
+			],
+			[
+				"lspset",
+				"Preferences: LSP Settings"
+			],
+			[
+				"lspleo",
+				"Preferences: LSP-leo Settings"
+			],
+			[
+				"review",
+				"github: review pull request (show: all)"
+			],
+			[
+				" ghof",
+				"github: open file in browser"
+			],
+			[
+				"lspsett",
+				"Preferences: LSP Settings"
+			],
+			[
+				"lspsetting",
+				"Preferences: LSP Settings"
+			],
+			[
+				"lspzub",
+				"Preferences: LSP-zuban Settings"
+			],
+			[
+				"ghopf",
+				"github: open file in browser"
+			],
+			[
+				"discov",
+				"Package Control: Discover Packages"
+			],
+			[
+				"edipt",
+				"Project: Edit Project"
+			],
+			[
+				"lspzuba",
+				"Preferences: LSP-zuban Settings"
+			],
+			[
+				"ww",
+				"Word Wrap: Toggle"
+			],
+			[
+				"duplica",
+				"File Manager: Duplicate"
+			],
+			[
+				"crepaul",
+				"github: create pull request"
+			],
+			[
+				"crepua",
+				"Package Control: Revert Built-in Package"
+			],
+			[
+				"lspzun",
+				"Preferences: LSP-zuban Settings"
+			],
+			[
+				"zuba",
+				"LSP-zuban: check Open Files"
+			],
+			[
+				"checkopen",
+				"LSP-zuban: check Open Files"
+			],
+			[
+				"lspzu",
+				"LSP-zuban: Settings"
+			],
+			[
+				"lspruff",
+				"Preferences: LSP-ruff Settings"
+			],
+			[
+				"lspephe",
+				"Preferences: LSP-epher Settings"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"creapu",
+				"github: create pull request"
+			],
+			[
+				"sort",
+				"LSP-json: Sort Document"
+			],
+			[
+				"creapul",
+				"github: create pull request"
+			],
+			[
+				"crpeua",
+				"LSP-pyright: Create Pyright Configuration File"
+			],
+			[
+				" creapul",
+				"github: create pull request"
+			],
+			[
+				"lspjson",
+				"Preferences: LSP-json Settings"
+			],
+			[
+				"ghopfie",
+				"github: open file in browser"
+			],
+			[
+				"lspjosn",
+				"Preferences: LSP-json Settings"
+			],
+			[
+				"ghopfile",
+				"github: open file in browser"
+			],
+			[
+				"lspkotli",
+				"Preferences: LSP-kotlin Settings"
+			],
+			[
+				"lspkot",
+				"Preferences: LSP-kotlin Settings"
+			],
+			[
+				"lspbased",
+				"Preferences: LSP-basedpyright Settings"
+			],
+			[
+				"lspbase",
+				"Preferences: LSP-basedpyright Settings"
+			],
+			[
+				"lspservocn",
+				"Preferences: LSP Server Configurations"
+			],
+			[
+				"lspvol",
+				"Preferences: LSP-volar Settings"
+			],
+			[
+				"lspvolar",
+				"Preferences: LSP-volar Settings"
+			],
+			[
+				"gotoimpl",
+				"LSP: Goto Implementation"
+			],
+			[
+				"lsptombi",
+				"Preferences: LSP-tombi Settings"
+			],
+			[
+				"syntaspeci",
+				"Preferences: Settings – Syntax Specific"
+			],
+			[
+				"lsppy",
+				"Preferences: LSP-pyproject Settings"
+			],
+			[
+				"lspypr",
+				"Preferences: LSP-pyproject Settings"
+			],
+			[
+				"lsppyrp",
+				"Preferences: LSP-pyproject Settings"
+			],
+			[
+				"javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"syntspec",
+				"Preferences: Settings – Syntax Specific"
+			],
+			[
+				"markdown",
+				"Set Syntax: Markdown"
+			],
+			[
+				"markdow",
+				"MarkdownTOC:Insert TOC"
+			],
+			[
+				"syntaspec",
+				"Preferences: Settings – Syntax Specific"
+			],
+			[
+				"lsp",
+				"Preferences: LSP-pyproject Settings"
+			],
+			[
+				"lsppyr",
+				"Preferences: LSP-pyproject Settings"
+			],
+			[
+				"lspjsonset",
+				"Preferences: LSP-json Settings"
+			],
+			[
+				"format",
+				"LSP: Format File With"
+			],
+			[
+				"settingsui",
+				"Preferences: Settings UI"
+			],
+			[
+				"isntapac",
+				"Package Control: Install Package"
+			],
+			[
+				"lspkeys",
+				"Preferences: LSP Key Bindings"
+			],
+			[
+				"edipr",
+				"Project: Edit Project"
+			],
+			[
+				"gotyp",
+				"LSP: Goto Type Definition"
+			],
+			[
+				"gotypt",
+				"LSP: Goto Type Definition"
+			],
+			[
+				"unittest",
+				"UnitTesting: Test Package"
+			],
+			[
+				"gpr",
+				"GitHubPullRequest: End review"
+			],
+			[
+				"isntap",
+				"Package Control: Install Package"
+			],
+			[
+				"lsptsog",
+				"Preferences: LSP-tsgo Settings"
+			],
+			[
+				"gotype",
+				"LSP: Goto Type Definition"
+			],
+			[
+				"gotoimp",
+				"LSP: Goto Implementation"
+			],
+			[
+				"lpsset",
+				"LSP: Select Performance Test"
+			],
+			[
+				"trou",
+				"LSP: Troubleshoot Server"
+			],
+			[
+				"lsptrou",
+				"LSP: Troubleshoot Server"
+			],
+			[
+				"torub",
+				"LSP: Troubleshoot Server"
+			],
+			[
+				"trouble",
+				"LSP: Troubleshoot Server"
+			],
+			[
+				"dsico",
+				"Package Control: Discover Packages"
+			],
+			[
+				"gotimpl",
+				"LSP: Goto Implementation"
+			],
+			[
+				"implement",
+				"LSP: Goto Implementation"
+			],
+			[
+				"remopr",
+				"Project Manager: Remove Dead Projects"
+			],
+			[
+				"removpr",
+				"Project Manager: Remove Project"
+			],
+			[
+				"removepr",
+				"Project Manager: Remove Project"
+			],
+			[
+				"removeproj",
+				"Project Manager: Remove Project"
+			],
+			[
+				"removproj",
+				"Project Manager: Remove Project"
+			],
+			[
+				"removeprojec",
+				"Project Manager: Remove Project"
+			],
+			[
+				"lspsem",
+				"LSP-semgrep: Sign In"
+			],
+			[
+				"delete",
+				"File Manager: Delete"
+			],
+			[
+				"lsp-gopls",
+				"LSP-gopls: Start Debug Server"
+			],
+			[
+				"lsppyrigsett",
+				"Preferences: LSP-pyright Settings"
+			],
+			[
+				"enalsp",
+				"LSP: Enable Language Server in Project"
+			],
+			[
+				"cloto",
+				"File: Close To The Right"
+			],
+			[
+				"ghop",
+				"github: open file in browser"
+			],
+			[
+				"edi",
+				"Project: Edit Project"
+			],
+			[
+				"lspform",
+				"LSP: Format File"
+			],
+			[
+				"ghopfi",
+				"github: open file in browser"
+			],
+			[
+				"disco",
+				"Package Control: Discover Packages"
+			],
+			[
+				"ghopr",
+				"github: open repo"
+			],
+			[
+				"GHOPF",
+				"github: open file in browser"
+			]
+		],
+		"width": 653.0
+	},
+	"console":
+	{
+		"height": 454.0,
+		"history":
+		[
+			"window.project_data()",
+			"importlib.import_module('LSP-jdtlss')",
+			"importlib.import_module('LSP-jdtls')",
+			"importlib.import_module('LSP-jdtls').",
+			"import importlib",
+			"view.set_name(Path('xxx'))",
+			"from pathlib import Path",
+			"view.set_name(Path('xxx'))",
+			"view.syntax()",
+			"view.syntax().selector",
+			"view.file_name()",
+			"view.settings().get('syntax', '').endswith('Python.sublime-syntax')",
+			"view.settings().get('syntax', '')",
+			"window.extract_variables().get('file')",
+			"self.window.extract_variables().get('file')",
+			"import json;print(json.dumps(view.settings().get('auto_complete_triggers'), indent=4))",
+			"view.settings().get('auto_complete_triggers')",
+			"view.settings('auto_complete_triggers')",
+			"view.change_count()",
+			"view.diagnostics ",
+			"view.diagnostics = 1",
+			"view.diagnostics",
+			"view.",
+			"x.style_for_scope('x')['x']",
+			"x.style_for_scope('x')",
+			"x",
+			"x=view",
+			"view",
+			"TimeoutError",
+			"Timeout",
+			"Timoeout",
+			"sys.version",
+			"import sys",
+			"sys.version",
+			"sel[0]",
+			"sel",
+			"sel=view.sel()",
+			"view.sel()",
+			"view.settings().get('lsp_uri')",
+			"sublime.log_input()",
+			"mdpopups.show_popup(view, \"```\\nsome text\\n```\\n---\")",
+			"mdpopups.show_popup(view, \"```some text\\n```\\n---\")",
+			"mdpopups.show_popup(view, \"```odin\\nfmt.println :: proc(args: ..any, sep := \\\" \\\", flush := true) -> int\\n```\\n---\")",
+			"mdpopups.show_popup(view, \"```odin\\nfmt.println :: proc(args: ..any, sep := \\\" \\\", flush := true) -> int\\n```\\n\")",
+			"mdpopups.show_popup(view, \"```odin\\nfmt.println :: proc(args: ..any, sep := \\\" \\\", flush := true) -> int\\n```\\n---\")",
+			"mdpopups.show_popup(view, \"```odin\\nfmt.println :: proc(args: ..any, sep := \\\" \\\", flush := true) -> int\\n```\\n---\\n\")",
+			"mdpopups.show_popup(view, \"```odin\\nfmt.println :: proc(args: ..any, sep := \\\" \\\", flush := true) -> int\\n```\")",
+			"mdpopups.show_popup(view, \"```odin\\nfmt.println :: proc(args: ..any, sep := \\\" \\\", flush := true) -> int\\n```\\n---\\nprintln formats using the default print settings and writes to os.stdout\")",
+			"import mdpopups",
+			"mdpopups.show_popup(view, \"```odin\\nfmt.println :: proc(args: ..any, sep := \\\" \\\", flush := true) -> int\\n```\\n---\\nprintln formats using the default print settings and writes to os.stdout\")",
+			"mdpopups.show_popup(view, \"```cpp\\nfmt.println :: proc(args: ..any, sep := \\\" \\\", flush := true) -> int\\n```\\n---\\nprintln formats using the default print settings and writes to os.stdout\")",
+			"mdpopups.show_popup(view, \"```odin\\nfmt.println :: proc(args: ..any, sep := \\\" \\\", flush := true) -> int\\n```\\n---\\nprintln formats using the default print settings and writes to os.stdout\")",
+			"mdpopups.show_popup(\"```odin\\nfmt.println :: proc(args: ..any, sep := \\\" \\\", flush := true) -> int\\n```\\n---\\nprintln formats using the default print settings and writes to os.stdout\")",
+			"mdpopups.show_popup",
+			"import mdpopups",
+			"None.test()",
+			"None.test",
+			"view.set_name('Asyncio Review')",
+			"re.match(r'abc', 'abc')",
+			"re.match(r'abc', 'xxxabc')",
+			"sublime.log_input()\n",
+			"import re",
+			"sublime.log_input()\n",
+			"mdpopups.md2html(None, 'test')",
+			"import mdpopups",
+			"getattr(x, 'x')",
+			"x={}",
+			"x['x']",
+			"x=None",
+			"view.settings().get('syntax')",
+			"sublime.find_syntax_for_file('test.js').path",
+			"sublime.find_syntax_for_file('test.js')",
+			"sublime.find_syntax_for_file(file_name)",
+			"sublime.find_resources(\"Markdown.sublime-syntax\")[0]",
+			"sublime.find_resources(\"Markdown.sublime-syntax\")",
+			"ublime.find_resources(\"Markdown.sublime-syntax\")",
+			"view",
+			"window.active_sheet().view()",
+			"window.active_sheet().view",
+			"window.active_sheet()",
+			"window.active_sheet().settings",
+			"window.active_sheet()",
+			"active_sheet",
+			"sublime.log_commands()",
+			"re.match(r'^(\\d+)', 'MDEwOlJlcG9zaXRvcnkyNzczMDMzOTI=\t<no value>')",
+			"import re",
+			"sublime.log_commands()",
+			"view.settings().get('lsp_uri')",
+			"Path(*('a', 'b'))",
+			"Path(('a', 'b'))",
+			"p.parts",
+			"s.parts",
+			"s.parts in p.parts",
+			"s=Path('github', 'workflows')",
+			"p=Path('/users/github/workflows/test.yaml')",
+			"Path('github', 'workflows')",
+			"Path(None)",
+			"from pathlib import Path",
+			"{'a': 1}=={'a':1}",
+			"{'a': 1}=={'b':1}",
+			"sublime.command_url('lsp_open_location', {\n            'location': {\n                'targetUri': 'uri',\n                'targetRange': 'range',\n                'targetSelectionRange': 1\n            },\n            'session_name': 's',\n            'flags': sublime.NewFileFlags.ADD_TO_SELECTION | sublime.NewFileFlags.SEMI_TRANSIENT | sublime.NewFileFlags.CLEAR_TO_RIGHT\n        })",
+			"sublime.command_url('lsp_open_location', {\n            'location': {\n                'targetUri': item['uri'],\n                'targetRange': item['range'],\n                'targetSelectionRange': selection_range\n            },\n            'session_name': self.session_name,\n            'flags': sublime.NewFileFlags.ADD_TO_SELECTION | sublime.NewFileFlags.SEMI_TRANSIENT | sublime.NewFileFlags.CLEAR_TO_RIGHT  # noqa: E501\n        })",
+			"sublime.log_input()",
+			"view.settings().get('lsp_uri')",
+			"from urllib.parse import urlparse;urlparse('dd://test/12').path",
+			"from urllib.parse import urlparse;urlparse('dd://test/12').path.split('/')",
+			"from urllib.parse import urlparse;urlparse('dd://test').path.split('/')",
+			"from urllib.parse import urlparse;urlparse('dd://test').path",
+			"from urllib.parse import urlparse;urlparse('').path",
+			"from urlib.parse import urlparse;urlparse('').path",
+			"a==b",
+			"a<b",
+			"a>b",
+			"a==b",
+			"a=TextPosition(1,2)",
+			"a==b",
+			"a=TextPosition(1,1)",
+			"str(b)",
+			"str(a)",
+			"a==b",
+			"b=TextPosition(1,1)",
+			"a=Point(1,1)",
+			"from LSP.plugin.core.protocol import Point, TextPosition",
+			"str(a)",
+			"str(b)",
+			"a==b",
+			"a==2",
+			"a==b"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/usr/local/workspace/sublime-packages/LSP-clangd/sample-project",
+		"/usr/local/workspace/sublime-packages/LSP-clangd/sample-project/src"
+	],
+	"file_history":
+	[
+		"/usr/local/workspace/sublime-packages/LSP-clangd/sample-project/project-binary-override.sublime-project",
+		"/usr/local/workspace/sublime-packages/LSP-clangd/LSP-clangd.sublime-commands",
+		"/usr/local/workspace/sublime-packages/LSP-epher/epher.tmLanguage",
+		"/usr/local/workspace/sublime-packages/LSP-epher/test.epher",
+		"/usr/local/workspace/sublime-packages/LSP-epher/LSP-epher.sublime-commands",
+		"/usr/local/workspace/sublime-packages/LSP-kotlin/plugin.py",
+		"/usr/local/workspace/sublime-packages/LSP-kotlin/LSP-kotlin.sublime-commands",
+		"/usr/local/workspace/sublime-packages/LSP/README.md",
+		"/usr/local/workspace/sublime-packages/LSP/LSP.sublime-settings",
+		"/usr/local/workspace/sublime-packages/LSP/plugin/api.py",
+		"/usr/local/workspace/sublime-packages/LSP/plugin/core/panels.py",
+		"/usr/local/workspace/sublime-packages/LSP/plugin/session_view.py",
+		"/usr/local/workspace/sublime-packages/LSP/plugin/session_buffer.py",
+		"/usr/local/workspace/sublime-packages/LSP-Tinymist/plugin.py",
+		"/usr/local/workspace/sublime-packages/LSP-Tinymist/LSP-Tinymist.sublime-commands",
+		"/usr/local/workspace/sublime-packages/LSP-rust-analyzer/plugin_commands.py",
+		"/usr/local/workspace/sublime-packages/LSP-rust-analyzer/plugin.py",
+		"/usr/local/workspace/sublime-packages/LSP/plugin/documents.py",
+		"/usr/local/workspace/sublime-packages/LSP/tests/server.py",
+		"/usr/local/workspace/sublime-packages/LSP/.github/workflows/test-community-packages.yaml",
+		"/usr/local/workspace/sublime-packages/LSP/.github/workflows/test.yml",
+		"/usr/local/workspace/sublime-packages/LSP/plugin/core/types.py",
+		"/usr/local/workspace/sublime-packages/LSP-clangd/sublime-package.json",
+		"/usr/local/workspace/sublime-packages/LSP-clangd/README.md",
+		"/usr/local/workspace/sublime-packages/LSP-clangd/plugin.py",
+		"/usr/local/workspace/sublime-packages/LSP-astro/LSP-astro.sublime-commands",
+		"/usr/local/workspace/sublime-packages/LSP-angular/README.md",
+		"/usr/local/workspace/sublime-packages/LSP-angular/server/package.json",
+		"/usr/local/workspace/sublime-packages/LSP-angular/LSP-angular.sublime-commands",
+		"/usr/local/workspace/sublime-packages/LSP/plugin/core/windows.py",
+		"/usr/local/workspace/sublime-packages/LSP/plugin/tooling.py",
+		"/usr/local/workspace/sublime-packages/LSP/plugin/core/sessions.py",
+		"/usr/local/workspace/sublime-packages/LSP-astro/plugin.py",
+		"/usr/local/workspace/sublime-packages/LSP-taplo/README.md",
+		"/usr/local/workspace/sublime-packages/symlink-packages.py",
+		"/usr/local/workspace/sublime-packages/LSP/plugin/core/popup_manager.py",
+		"/usr/local/workspace/sublime-packages/LSP-epher/plugin.py",
+		"/usr/local/workspace/sublime-packages/LSP/plugin/core/messages_panel.py",
+		"/usr/local/workspace/sublime-packages/LSP-TexLab/server.py",
+		"/usr/local/workspace/sublime-packages/LSP/sublime-package.json",
+		"/Users/rafal/Library/Application Support/Sublime Text/Packages/User/Projects/sublime-packages.sublime-project",
+		"/usr/local/workspace/sublime-packages/LSP-angular/plugin.py",
+		"/usr/local/workspace/sublime-packages/LSP-angular/test.ngx",
+		"/usr/local/workspace/sublime-packages/LSP/sheets.css",
+		"/usr/local/workspace/sublime-packages/LSP/plugin/completion.py",
+		"/usr/local/workspace/sublime-packages/LSP/plugin/configuration.py",
+		"/usr/local/workspace/sublime-packages/LSP/plugin/core/configurations.py",
+		"/usr/local/workspace/sublime-packages/LSP/plugin/core/workspace.py",
+		"/usr/local/workspace/sublime-packages/LSP/plugin/core/active_request.py",
+		"/usr/local/workspace/sublime-packages/LSP/plugin/core/protocol.py",
+		"/usr/local/workspace/sublime-packages/LSP-pyright/LSP-pyright.sublime-commands",
+		"/usr/local/workspace/sublime-packages/LSP-basedpyright/plugin/client.py",
+		"/usr/local/workspace/sublime-packages/LSP-basedpyright/LSP-basedpyright.sublime-settings",
+		"/usr/local/workspace/sublime-packages/LSP-pyright/plugin/client.py",
+		"/usr/local/workspace/sublime-packages/LSP-gopls/LSP-gopls.sublime-settings",
+		"/usr/local/workspace/sublime-packages/LSP-gopls/plugin/plugin.py",
+		"/usr/local/workspace/sublime-packages/LSP/plugin/diagnostics.py",
+		"/Users/rafal/Library/Application Support/Sublime Text/Packages/LSP-Laravel/LSP-Laravel.sublime-settings",
+		"/usr/local/workspace/sublime-packages/LSP-gopls/plugin/utils.py",
+		"/usr/local/workspace/sublime-packages/LSP-gopls/plugin/types.py",
+		"/usr/local/workspace/sublime-packages/LSP-gopls/plugin/commands.py",
+		"/usr/local/workspace/sublime-packages/LSP-gopls/plugin/__init__.py",
+		"/usr/local/workspace/sublime-packages/LSP-gopls/plugin/constants.py",
+		"/usr/local/workspace/sublime-packages/LSP-gopls/plugin/version.py",
+		"/usr/local/workspace/sublime-packages/LSP-gopls/pyproject.toml",
+		"/usr/local/workspace/sublime-packages/LSP-tsgo/pyproject.toml",
+		"/usr/local/workspace/sublime-packages/LSP-eslint/pyproject.toml",
+		"/usr/local/workspace/sublime-packages/LSP-gopls/boot.py",
+		"/usr/local/workspace/sublime-packages/LSP-gopls/scripts/compare_tags.py",
+		"/usr/local/workspace/sublime-packages/LSP-gopls/scripts/update-schema-settings.py",
+		"/usr/local/workspace/sublime-packages/LSP/pyproject.toml",
+		"/usr/local/workspace/sublime-packages/LSP/plugin/core/registry.py",
+		"/usr/local/workspace/sublime-packages/LSP-gopls/.github/workflows/gopls_update_check.yaml",
+		"/usr/local/workspace/sublime-packages/LSP-jdtls/LSP-jdtls.sublime-commands",
+		"/usr/local/workspace/sublime-packages/LSP-basedpyright/scripts/update_schema.py",
+		"/usr/local/workspace/sublime-packages/LSP/plugin/core/edit.py",
+		"/usr/local/workspace/sublime-packages/LSP/plugin/edit.py",
+		"/usr/local/workspace/sublime-packages/LSP/plugin/rename.py",
+		"/usr/local/workspace/sublime-packages/LSP/plugin/rename_file.py",
+		"/usr/local/workspace/sublime-packages/LSP/plugin/core/open.py",
+		"/usr/local/workspace/sublime-packages/LSP/plugin/core/promise.py",
+		"/usr/local/workspace/sublime-packages/LSP-jdtls/modules/test_extension_commands.py",
+		"/usr/local/workspace/sublime-packages/LSP-jdtls/modules/jdtls.py",
+		"/usr/local/workspace/sublime-packages/LSP-jdtls/modules/constants.py",
+		"/usr/local/workspace/sublime-packages/LSP-jdtls/modules/installer.py",
+		"/usr/local/workspace/sublime-packages/LSP/plugin/core/constants.py",
+		"/usr/local/workspace/sublime-packages/LSP-jdtls/modules/utils.py",
+		"/usr/local/workspace/sublime-packages/LSP-jdtls/modules/protocol.py",
+		"/usr/local/workspace/sublime-packages/LSP/protocol/__init__.py",
+		"/usr/local/workspace/sublime-packages/LSP-jdtls/modules/workspace_execute_client_command_handler.py",
+		"/usr/local/workspace/sublime-packages/LSP-jdtls/modules/jdtls_commands.py",
+		"/usr/local/workspace/sublime-packages/LSP-semgrep/templates/sublime-package.jinja.json",
+		"/usr/local/workspace/sublime-packages/LSP-semgrep/templates/sublime-settings.jinja.json",
+		"/usr/local/workspace/sublime-packages/LSP-semgrep/settings-processor.json",
+		"/usr/local/workspace/sublime-packages/LSP-semgrep/plugin.py",
+		"/usr/local/workspace/sublime-packages/LSP-esphome/LSP-esphome.sublime-commands",
+		"/usr/local/workspace/sublime-packages/LSP-ruff/pyproject.toml",
+		"/usr/local/workspace/sublime-packages/LSP-semgrep/LSP-semgrep.sublime-commands",
+		"/usr/local/workspace/sublime-packages/LSP/tests/test_single_document.py",
+		"/usr/local/workspace/sublime-packages/LSP/tests/test_views.py",
+		"/usr/local/workspace/sublime-packages/LSP/plugin/core/url.py",
+		"/usr/local/workspace/sublime-packages/LSP-cspell/LSP-cspell.sublime-commands",
+		"/usr/local/workspace/sublime-packages/LSP-cspell/.github/workflows/update-server.yaml",
+		"/usr/local/workspace/sublime-packages/LSP/plugin/goto.py",
+		"/usr/local/workspace/sublime-packages/LSP/plugin/core/input_handlers.py",
+		"/usr/local/workspace/sublime-packages/LSP/plugin/symbols.py",
+		"/usr/local/workspace/sublime-packages/LSP/stubs/sublime.pyi",
+		"/usr/local/workspace/sublime-packages/LSP/plugin/core/tree_view.py",
+		"/usr/local/workspace/sublime-packages/LSP/stubs/sublime_types.pyi",
+		"/usr/local/workspace/sublime-packages/lsp_utils/tests/setup.py",
+		"/usr/local/workspace/sublime-packages/LSP/stubs/sublime_plugin.pyi",
+		"/usr/local/workspace/sublime-packages/LSP/tests/setup.py",
+		"/usr/local/workspace/sublime-packages/LSP-pawnforge/LSP-pawnforge.sublime-settings",
+		"/usr/local/workspace/sublime-packages/LSP-pawnforge/plugin.py",
+		"/usr/local/workspace/sublime-packages/LSP/docs/mkdocs.yml",
+		"/usr/local/workspace/sublime-packages/LSP/plugin/__init__.py",
+		"/usr/local/workspace/sublime-packages/LSP/plugin/document_link.py",
+		"/usr/local/workspace/sublime-packages/LSP/plugin/formatting.py",
+		"/usr/local/workspace/sublime-packages/LSP/plugin/core/logging.py",
+		"/usr/local/workspace/sublime-packages/LSP/plugin/core/transports.py",
+		"/usr/local/workspace/sublime-packages/LSP/CONTRIBUTING.md",
+		"/usr/local/workspace/sublime-packages/LSP-bash/plugin/client.py",
+		"/usr/local/workspace/sublime-packages/LSP-tsgo/LSP-tsgo.sublime-commands",
+		"/usr/local/workspace/sublime-packages/LSP-copilot/plugin/helpers.py",
+		"/usr/local/workspace/sublime-packages/LSP-Dart/plugin.py",
+		"/usr/local/workspace/sublime-packages/LSP-julia/plugin.py",
+		"/usr/local/workspace/sublime-packages/LSP-leo/plugin.py",
+		"/usr/local/workspace/sublime-packages/LSP-marksman/plugin.py"
+	],
+	"find":
+	{
+		"height": 32.0
+	},
+	"find_in_files":
+	{
+		"height": 143.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/greeter.cpp",
+					"selected": true,
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 534,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"lsp_uri": "file:///usr/local/workspace/sublime-packages/LSP-clangd/sample-project/src/greeter.cpp",
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 60.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.LSP Log Panel":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"output.diagnostics":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"output.find_results":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"pinned_build_system": "",
+	"project": "project-binary-override.sublime-project",
+	"replace":
+	{
+		"height": 60.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"lspclangd",
+				"LSP-clangd/LSP-clangd.sublime-commands"
+			],
+			[
+				"lspeph",
+				"LSP-epher/LSP-epher.sublime-commands"
+			],
+			[
+				"lspkotlin",
+				"LSP-kotlin/LSP-kotlin.sublime-commands"
+			],
+			[
+				"plugapi",
+				"LSP/plugin/api.py"
+			],
+			[
+				"lsp/readme",
+				"LSP/README.md"
+			],
+			[
+				"emsspanel",
+				"LSP/plugin/core/messages_panel.py"
+			],
+			[
+				"sesbuff",
+				"LSP/plugin/session_buffer.py"
+			],
+			[
+				"lsptiny",
+				"LSP-Tinymist/LSP-Tinymist.sublime-commands"
+			],
+			[
+				"lsprustanaplug",
+				"LSP-rust-analyzer/plugin.py"
+			],
+			[
+				"testsserver",
+				"LSP/tests/server.py"
+			],
+			[
+				"server.",
+				"LSP/tests/server.py"
+			],
+			[
+				"server.py",
+				"LSP/tests/server.py"
+			],
+			[
+				"serve.rpy",
+				"LSP-TexLab/server.py"
+			],
+			[
+				"lspclandreadm",
+				"LSP-clangd/README.md"
+			],
+			[
+				"lspclangplugin",
+				"LSP-clangd/plugin.py"
+			],
+			[
+				"lspastr",
+				"LSP-astro/LSP-astro.sublime-commands"
+			],
+			[
+				"lspangul",
+				"LSP-angular/LSP-angular.sublime-commands"
+			],
+			[
+				"session",
+				"LSP/plugin/core/sessions.py"
+			],
+			[
+				"taploreadm",
+				"LSP-taplo/README.md"
+			],
+			[
+				".sh",
+				"LSP-basedpyright/scripts/update_overwrites.sh"
+			],
+			[
+				"makefile",
+				"LSP-basedpyright/Makefile"
+			],
+			[
+				"lspdenoplug",
+				"LSP-Deno/plugin.py"
+			],
+			[
+				"lspdenoplugin",
+				"LSP-Deno/plugin.py"
+			],
+			[
+				"workexe",
+				"LSP-jdtls/modules/workspace_execute_client_command_handler.py"
+			],
+			[
+				"modulejdtl",
+				"LSP-jdtls/modules/jdtls.py"
+			],
+			[
+				"plugininit",
+				"LSP/plugin/__init__.py"
+			],
+			[
+				"lspjdtreadm",
+				"LSP-jdtls/README.md"
+			],
+			[
+				"lspjdtls",
+				"LSP-jdtls/LSP-jdtls.sublime-commands"
+			],
+			[
+				"lsptombireadm",
+				"LSP-tombi/README.md"
+			],
+			[
+				"lspdeno",
+				"LSP-Deno/LSP-Deno.sublime-commands"
+			],
+			[
+				"eidt",
+				"LSP/plugin/edit.py"
+			],
+			[
+				"lspmetal",
+				"LSP-metals/LSP-metals.sublime-commands"
+			],
+			[
+				"lspleoplug",
+				"LSP-leo/plugin.py"
+			],
+			[
+				"lspesph",
+				"LSP-esphome/LSP-esphome.sublime-commands"
+			],
+			[
+				"testcomm",
+				"LSP/.github/workflows/test-community-packages.yaml"
+			],
+			[
+				"type_converters",
+				"LSP/plugin/core/type_converters.py"
+			],
+			[
+				"lsprustana",
+				"LSP-rust-analyzer/plugin.py"
+			],
+			[
+				"sesss",
+				"LSP-PowerShellEditorServices/LSP-PowerShellEditorServices.sublime-settings"
+			],
+			[
+				"lsppyrighclient",
+				"LSP-pyright/plugin/client.py"
+			],
+			[
+				"popupman",
+				"/usr/local/workspace/sublime-packages/LSP/plugin/core/popup_manager.py"
+			],
+			[
+				"lspjdtpypr",
+				"LSP-jdtls/pyproject.toml"
+			],
+			[
+				"lspgno",
+				"LSP-gnols/LSP-gnols.sublime-commands"
+			],
+			[
+				"lspjdt",
+				"LSP-jdtls/LSP-jdtls.sublime-commands"
+			],
+			[
+				"lspemberplugin",
+				"LSP-ember/plugin.py"
+			],
+			[
+				"lsplean",
+				"LSP-lean/LSP-lean.sublime-commands"
+			],
+			[
+				"lspvue",
+				"LSP-vue/LSP-vue.sublime-commands"
+			],
+			[
+				"lsptinymist",
+				"LSP-Tinymist/LSP-Tinymist.sublime-commands"
+			],
+			[
+				"lsptypeplugin",
+				"LSP-typescript/plugin.py"
+			],
+			[
+				"lspzub",
+				"LSP-zuban/LSP-zuban.sublime-settings"
+			],
+			[
+				"lsppyrigh",
+				"LSP-pyright/boot.py"
+			],
+			[
+				"lspzuba",
+				"LSP-zuban/LSP-zuban.sublime-settings"
+			],
+			[
+				"mainsublmenu",
+				"LSP-angular/Main.sublime-menu"
+			],
+			[
+				"lsp_utiltestcom",
+				"lsp_utils/.github/workflows/test-community-packages.yaml"
+			],
+			[
+				"lsp_utils",
+				"lsp_utils/tests/setup.py"
+			],
+			[
+				"lsputil",
+				"LSP/lsp_utils.sublime-settings"
+			],
+			[
+				"lspboot",
+				"LSP/boot.py"
+			],
+			[
+				"lspworkflowcommun",
+				"LSP/.github/workflows/test-community-packages.yaml"
+			],
+			[
+				"lsputilstestcom",
+				"lsp_utils/.github/workflows/test-community-packages.yaml"
+			],
+			[
+				"pyproj",
+				"LSP-bash/pyproject.toml"
+			],
+			[
+				"lsputilcomm",
+				"lsp_utils/.github/workflows/test-community-packages.yaml"
+			],
+			[
+				"lspoxlin",
+				"LSP-oxlint/LSP-oxlint.sublime-commands"
+			],
+			[
+				"lsptom",
+				"LSP-tombi/LSP-tombi.sublime-settings"
+			],
+			[
+				"lspembermenu",
+				"LSP-ember/Main.sublime-menu"
+			],
+			[
+				"lsppawnformain",
+				"LSP-pawnforge/Main.sublime-menu"
+			],
+			[
+				"lsppaw",
+				"LSP-pawnforge/LSP-pawnforge.sublime-settings"
+			],
+			[
+				"docume",
+				"LSP/plugin/documents.py"
+			],
+			[
+				"lsppluginapi",
+				"LSP/plugin/api.py"
+			],
+			[
+				"lspjsonplugin",
+				"LSP-json/plugin.py"
+			],
+			[
+				"lspkotplugin",
+				"LSP-kotlin/plugin.py"
+			],
+			[
+				"lspwatcherrust",
+				"LSP-file-watcher-rust/transports.py"
+			],
+			[
+				"lspfilwatrust",
+				"LSP-file-watcher-rust/transports.py"
+			],
+			[
+				"lspfilewatrust",
+				"LSP-file-watcher-rust/rust-watcher"
+			],
+			[
+				"types.py",
+				"LSP-html/plugin/data_types.py"
+			],
+			[
+				"symlink",
+				"/usr/local/workspace/sublime-packages/symlink-packages.py"
+			],
+			[
+				".java",
+				"LSP-jdtls/HelloWorld.java"
+			],
+			[
+				"lspkot",
+				"LSP-kotlin/LSP-kotlin.sublime-commands"
+			],
+			[
+				"pdepe",
+				"LSP-performance-test/dependencies.json"
+			],
+			[
+				"lsputils",
+				"LSP/lsp_utils.sublime-settings"
+			],
+			[
+				"diagnost",
+				"LSP/plugin/diagnostics.py"
+			],
+			[
+				"lsppylspplug",
+				"LSP-pylsp/plugin.py"
+			],
+			[
+				"lspvolarplug",
+				"LSP-volar/plugin.py"
+			],
+			[
+				"windows",
+				"LSP/plugin/core/windows.py"
+			],
+			[
+				"cretypes",
+				"LSP/plugin/core/types.py"
+			],
+			[
+				"ore/views.p",
+				"LSP/plugin/core/views.py"
+			],
+			[
+				"sesview",
+				"LSP/plugin/session_view.py"
+			],
+			[
+				"lsptombi",
+				"LSP-tombi/LSP-tombi.sublime-settings"
+			],
+			[
+				"renfile",
+				"LSP/plugin/rename_file.py"
+			],
+			[
+				"pyprojec",
+				"LSP-bash/pyproject.toml"
+			],
+			[
+				"lsptombisetting",
+				"LSP-tombi/LSP-tombi.sublime-settings"
+			],
+			[
+				"lsppyproj",
+				"LSP/pyproject.toml"
+			],
+			[
+				"yaml",
+				"LSP-bash/.github/workflows/schema.yaml"
+			],
+			[
+				"pyrpojectoml",
+				"LSP-biome/pyproject.toml"
+			],
+			[
+				"pypr",
+				"LSP-esphome/pyproject.toml"
+			],
+			[
+				"testocmm",
+				"LSP/.github/workflows/test-community-packages.yaml"
+			],
+			[
+				"lspaure",
+				"LSP-aurelia/LSP-aurelia.sublime-commands"
+			],
+			[
+				"lsptexlab",
+				"LSP-TexLab/LSP-TexLab.sublime-build"
+			],
+			[
+				"lspdartplug",
+				"LSP-Dart/plugin.py"
+			],
+			[
+				"lsptsgo",
+				"LSP-tsgo/LSP-tsgo.sublime-commands"
+			],
+			[
+				"lspbiomepyproj",
+				"LSP-biome/pyproject.toml"
+			],
+			[
+				"contr",
+				"LSP/CONTRIBUTING.md"
+			],
+			[
+				"contru",
+				"LSP/CONTRIBUTING.md"
+			],
+			[
+				"pluginapi",
+				"LSP/plugin/api.py"
+			],
+			[
+				"mkdocs",
+				"LSP/docs/mkdocs.yml"
+			],
+			[
+				"lspgopols",
+				"LSP-gopls/LSP-gopls.sublime-commands"
+			],
+			[
+				"lsppwa",
+				"LSP-pawnforge/LSP-pawnforge.sublime-settings"
+			],
+			[
+				"lsppawn",
+				"LSP-pawnforge/LSP-pawnforge.sublime-settings"
+			],
+			[
+				"lspcspell",
+				"LSP-cspell/LSP-cspell.sublime-commands"
+			],
+			[
+				"test_single_document",
+				"LSP/tests/test_single_document.py"
+			],
+			[
+				"testcodeact",
+				"LSP/tests/test_code_actions.py"
+			],
+			[
+				"sess",
+				"LSP/plugin/core/sessions.py"
+			],
+			[
+				"offsets",
+				"LSP/plugin/core/offsets.py"
+			],
+			[
+				"lspjson",
+				"LSP-json/lsp-json-schemas.json"
+			],
+			[
+				"trans",
+				"LSP/plugin/core/transports.py"
+			],
+			[
+				"lsprustna",
+				"LSP-rust-analyzer/command_syntax_tree.py"
+			],
+			[
+				".ts",
+				"LSP-relay/test.ts"
+			],
+			[
+				"lspyaml",
+				"LSP-yaml/LSP-yaml.sublime-commands"
+			],
+			[
+				"lspeslintpypr",
+				"LSP-eslint/pyproject.toml"
+			],
+			[
+				"test.py",
+				"LSP/test.py"
+			],
+			[
+				"coreiwndow",
+				"LSP/plugin/core/windows.py"
+			],
+			[
+				"coretypes",
+				"LSP/plugin/core/types.py"
+			],
+			[
+				"transpor",
+				"LSP/plugin/core/transports.py"
+			],
+			[
+				"tran",
+				"LSP-file-watcher-chokidar/transports.py"
+			],
+			[
+				"tool",
+				"LSP/plugin/tooling.py"
+			],
+			[
+				"aio",
+				"LSP/plugin/core/aio.py"
+			],
+			[
+				"rustanal",
+				"LSP-rust-analyzer/LSP-rust-analyzer.sublime-commands"
+			],
+			[
+				"lspruf",
+				"LSP-ruff/pyproject.toml"
+			],
+			[
+				"lsptsgogithub",
+				"LSP-tsgo/.github/workflows/on-pull-request.yaml"
+			],
+			[
+				"lspsemgre",
+				"LSP-semgrep/LSP-semgrep.sublime-commands"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 502.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Library/Application Support/Sublime Text/Packages/User/Projects/typescript-language-server.sublime-project"
+			],
+			[
+				"angl",
+				"~/workspace/tidal angular.sublime-project"
+			],
+			[
+				"mikr",
+				"~/workspace/mikrokoszalin.sublime-project"
+			],
+			[
+				"ang",
+				"~/workspace/tidal angular.sublime-project"
+			],
+			[
+				"tidaan",
+				"~/workspace/tidal angular.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 113.0,
+		"last_filter": "purge_changes_async",
+		"selected_items":
+		[
+			[
+				"purge_changes_async",
+				"purge_changes_async"
+			],
+			[
+				"send_request_task",
+				"send_request_task"
+			],
+			[
+				"lspexecu",
+				"LspExecuteCommand"
+			],
+			[
+				"text_document",
+				"text_document_item"
+			],
+			[
+				"regionto",
+				"region_to_range"
+			],
+			[
+				"resolvelan",
+				"resolve_launch_config"
+			],
+			[
+				"client",
+				"ClientConfig"
+			],
+			[
+				"on_pre_server_command",
+				"on_pre_server_command"
+			],
+			[
+				"show_quick_panel",
+				"show_quick_panel"
+			],
+			[
+				"pawnbuild",
+				"PawnBuildCommand"
+			],
+			[
+				"request",
+				"request_handler"
+			],
+			[
+				"requestha",
+				"request_handler"
+			],
+			[
+				"ServerResponse",
+				"on_server_response_async"
+			],
+			[
+				"_activated_impl",
+				"_activated_impl"
+			],
+			[
+				"_setup",
+				"_setup"
+			],
+			[
+				"onservr",
+				"on_server_notification_async"
+			],
+			[
+				"uvman",
+				"UvVenvManager"
+			],
+			[
+				"ServerNotifications",
+				"ServerNotifications"
+			],
+			[
+				"_on_load_impl",
+				"_on_load_impl"
+			],
+			[
+				"shutdown",
+				"shutdown"
+			],
+			[
+				"cancel_all_tasks",
+				"cancel_all_tasks"
+			],
+			[
+				"remove_session_view",
+				"remove_session_view"
+			],
+			[
+				"on_view_status_changed",
+				"on_view_status_changed"
+			],
+			[
+				"erase_view_status",
+				"erase_view_status"
+			],
+			[
+				"unregister_session_view",
+				"unregister_session_view"
+			],
+			[
+				"run_on_main_thread",
+				"run_on_main_thread"
+			],
+			[
+				"disable",
+				"disable"
+			],
+			[
+				"destroy",
+				"destroy"
+			],
+			[
+				"exceptions_log",
+				"exceptions_log"
+			],
+			[
+				"session_by_name",
+				"session_by_name"
+			],
+			[
+				"Position",
+				"Position"
+			],
+			[
+				"restart_sessions",
+				"restart_sessions"
+			],
+			[
+				"doculist",
+				"DocumentSyncListener"
+			],
+			[
+				"windoman",
+				"WindowManager"
+			],
+			[
+				"windoregi",
+				"WindowRegistry"
+			],
+			[
+				"CompletionList",
+				"CompletionList"
+			],
+			[
+				"setcomple",
+				"set_completions"
+			],
+			[
+				"CompletionValue",
+				"CompletionValue"
+			],
+			[
+				"CompletionItem",
+				"CompletionItem"
+			],
+			[
+				"value",
+				"Value"
+			],
+			[
+				"PluginStartError",
+				"PluginStartError"
+			],
+			[
+				"trigger_on_pre_save",
+				"trigger_on_pre_save"
+			],
+			[
+				"_trigger_on_pre_save",
+				"_trigger_on_pre_save"
+			],
+			[
+				"taskconta",
+				"TaskContainer"
+			],
+			[
+				"lspopenlo",
+				"LspOpenLocationCommand"
+			],
+			[
+				"lspopenloca",
+				"LspOpenLocationCommand"
+			],
+			[
+				"gotsource",
+				"LspTypescriptGotoSourceDefinitionCommand"
+			],
+			[
+				"purge_changes",
+				"purge_changes"
+			],
+			[
+				"on_pre_save",
+				"on_pre_save"
+			],
+			[
+				"LspSaveCommand",
+				"LspSaveCommand"
+			],
+			[
+				"try_open_uri_async",
+				"try_open_uri_async"
+			],
+			[
+				"uri_handler",
+				"uri_handler"
+			],
+			[
+				"docusynlin",
+				"DocumentSyncListener"
+			],
+			[
+				"is_applicable_async",
+				"is_applicable_async"
+			],
+			[
+				"on_payload",
+				"on_payload"
+			],
+			[
+				"do_document_diagnostic",
+				"do_document_diagnostic"
+			],
+			[
+				"sessionbuff",
+				"SessionBuffer"
+			],
+			[
+				"sesbuf",
+				"session_buffer"
+			],
+			[
+				"create_task",
+				"create_task"
+			],
+			[
+				"on_before_remove",
+				"on_before_remove"
+			],
+			[
+				"on_session_shutdown",
+				"on_session_shutdown"
+			],
+			[
+				"request_code_actions_async",
+				"request_code_actions_async"
+			],
+			[
+				"clientcon",
+				"ClientConfig"
+			],
+			[
+				"lspapptextdo",
+				"LspApplyTextDocumentEditCommand"
+			],
+			[
+				"handle_show_message",
+				"handle_show_message"
+			],
+			[
+				"set_diagnostics",
+				"set_diagnostics"
+			],
+			[
+				"on_diagnostics_updated",
+				"on_diagnostics_updated"
+			],
+			[
+				"cancelrequst",
+				"CancellableRequest"
+			],
+			[
+				"inflight",
+				"CancellableInflightRequest"
+			],
+			[
+				"offset_to_point",
+				"offset_to_point"
+			],
+			[
+				"offset_to_position",
+				"offset_to_text_position"
+			],
+			[
+				"await_message",
+				"await_message"
+			],
+			[
+				"promise",
+				"Promise"
+			],
+			[
+				"expanvaria",
+				"expand_variables"
+			],
+			[
+				"error",
+				"Error"
+			],
+			[
+				"on_pre_start_async",
+				"on_pre_start_async"
+			],
+			[
+				"run_on_threadpool",
+				"run_on_threadpool"
+			],
+			[
+				"windman",
+				"WindowManager"
+			],
+			[
+				"sessbuff",
+				"SessionBuffer"
+			],
+			[
+				"session",
+				"Session"
+			],
+			[
+				"docusynli",
+				"DocumentSyncListener"
+			],
+			[
+				"querycompl",
+				"on_query_completions"
+			],
+			[
+				"region",
+				"Region"
+			],
+			[
+				"range",
+				"Range"
+			],
+			[
+				"newhtml",
+				"new_html_sheet"
+			],
+			[
+				"ResponseException",
+				"SMTPResponseException"
+			],
+			[
+				"windowman",
+				"WindowManager"
+			],
+			[
+				"commandarg",
+				"CommandArgsDict"
+			],
+			[
+				"CompletionKind",
+				"CompletionItemKind"
+			],
+			[
+				"Point",
+				"Point"
+			],
+			[
+				"CommandArgsDict",
+				"CommandArgsDict"
+			],
+			[
+				"ExtractVariablesDict",
+				"ExtractVariablesDict"
+			],
+			[
+				"EventModifierKeysDict",
+				"EventModifierKeysDict"
+			],
+			[
+				"eventdict",
+				"EventDict"
+			],
+			[
+				"setlayout",
+				"set_layout"
+			],
+			[
+				"encode",
+				"encode_value"
+			],
+			[
+				"on_configs_changed",
+				"on_configs_changed"
+			],
+			[
+				"on_server_settings_changed",
+				"on_server_settings_changed"
+			],
+			[
+				"update",
+				"update"
+			],
+			[
+				"on_client_config_updated",
+				"on_client_config_updated"
+			],
+			[
+				"signinfor",
+				"SignatureInformation"
+			],
+			[
+				"clientconf",
+				"ClientConfigs"
+			],
+			[
+				"settingsre",
+				"SettingsRegistration"
+			],
+			[
+				"setreg",
+				"setregid"
+			],
+			[
+				"settreg",
+				"SettingsRegistration"
+			],
+			[
+				"settingsr",
+				"SettingsRegistration"
+			],
+			[
+				"exception",
+				"exception_log"
+			],
+			[
+				"logexcep",
+				"log_exception"
+			],
+			[
+				"logex",
+				"log_exception"
+			],
+			[
+				"cliencon",
+				"ClientConfigs"
+			],
+			[
+				"on_pre_close",
+				"on_pre_close"
+			],
+			[
+				"enableprojec",
+				"LspEnableLanguageServerInProjectCommand"
+			],
+			[
+				"docsyncl",
+				"DocumentSyncListener"
+			],
+			[
+				"Request",
+				"Request"
+			],
+			[
+				"DocumentSyncListener",
+				"DocumentSyncListener"
+			],
+			[
+				"settingre",
+				"SettingsRegistration"
+			],
+			[
+				"settings",
+				"SettingsRegistration"
+			],
+			[
+				"settregi",
+				"SettingsRegistration"
+			],
+			[
+				"registpug",
+				"register_plugin"
+			],
+			[
+				"onworksconf",
+				"on_workspace_configuration"
+			],
+			[
+				"await_client_notification",
+				"await_client_notification"
+			],
+			[
+				"sendnotif",
+				"send_notification"
+			],
+			[
+				"lspformat",
+				"LspFormatDocumentRangeCommand"
+			],
+			[
+				"appltext",
+				"apply_text_edits"
+			],
+			[
+				"lspapptext",
+				"LspApplyTextDocumentEditCommand"
+			],
+			[
+				"SnippetTextEdit",
+				"SnippetTextEdit"
+			],
+			[
+				"apply_text_edits",
+				"apply_text_edits"
+			],
+			[
+				"callhiecom",
+				"LspCallHierarchyCommand"
+			]
+		],
+		"width": 568.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"lsp_show_inlay_hints": false,
+		"tab_stack.sheet_selection_history":
+		{
+			"groups":
+			{
+				"0":
+				[
+					{
+						"active_sheet_index": 0,
+						"selected_sheets":
+						[
+							{
+								"kind": "TextSheet",
+								"name": "greeter.cpp",
+								"occurrence": 0,
+								"path": "/usr/local/workspace/sublime-packages/LSP-clangd/sample-project/src/greeter.cpp"
+							}
+						]
+					}
+				]
+			}
+		}
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 312.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
