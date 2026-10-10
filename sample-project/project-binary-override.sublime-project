@@ -1,0 +1,18 @@
+{
+    // Test case: the project overrides "binary".
+    // "system_binary" points to a missing executable to simulate clangd not being installed.
+    // Expected: the install dialog mentions "project settings" and "binary" below changes to "auto".
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "LSP": {
+            "LSP-clangd": {
+                "binary": "system",
+                "system_binary": "clangd-does-not-exist"
+            }
+        }
+    }
+}
