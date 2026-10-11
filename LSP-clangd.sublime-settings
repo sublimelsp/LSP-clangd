@@ -23,15 +23,15 @@
         // This can be used for MSYS2's clangd for example.
         "custom_command": [],
 
-        // see: https://clangd.llvm.org/extensions#compilation-commands
+        // @see https://clangd.llvm.org/extensions#file-status
+        // Enables receiving textDocument/clangd.fileStatus notifications.
+        // The state of the file (for example "parsing includes") is shown in the status bar.
+        "clangdFileStatus": true,
+        // @see https://clangd.llvm.org/extensions#compilation-commands
+
         // Controls the flags used when no specific compile command is found.
         // The compile command will be approximately clang $FILE $fallbackFlags in this case.
         "fallbackFlags": [],
-
-        // see: https://clangd.llvm.org/extensions.html#file-status
-        // Shows the current status of the language server in the bottom left.
-        // Set to false to disable it.
-        "clangdFileStatus": true,
 
         // clangd options. Set to null to keep the clangd default.
         // These options are converted to commandline options when clangd is startet.

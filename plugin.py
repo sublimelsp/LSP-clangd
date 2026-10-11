@@ -14,6 +14,7 @@ from typing import TypedDict, cast, final
 from urllib.request import urlopen
 
 import sublime
+import sublime_aio
 from LSP.plugin import (
     ClientConfig,
     Error,
@@ -26,17 +27,17 @@ from LSP.plugin import (
     ServerResponse,
     notification_handler,
     parse_uri,
+    range_to_region,
+    region_to_range,
     run_coroutine,
+    text_document_identifier,
 )
 from LSP.plugin.core.tree_view import TreeDataProvider, TreeItem, new_tree_view_sheet
 from LSP.plugin.core.views import (
     entire_content_range,
     first_selection_region,
-    range_to_region,
-    region_to_range,
-    text_document_identifier,
 )
-from LSP.protocol import Range, TextDocumentIdentifier
+from LSP.protocol import DocumentUri, Range, TextDocumentIdentifier
 from typing_extensions import override
 
 SETTINGS_FILENAME = "LSP-clangd.sublime-settings"
@@ -52,10 +53,10 @@ INACTIVE_REGIONS_KEY = "LSP-clangd-inactive-regions"
 class FileStatus(TypedDict):
     """Sent when the current activity for a file changes. Replaces previous activity for that file."""
 
-    uri: str
-    """The document whose status is being updated."""
+    uri: DocumentUri
+    """The text document's URI."""
     state: str
-    """Human-readable information about current activity."""
+    """The human-readable state of the file, for example "parsing includes" or "idle"."""
 
 
 class InactiveRegions(TypedDict):
@@ -263,10 +264,11 @@ class Clangd(LspPlugin):
                 contents["value"] = content
 
     @notification_handler("textDocument/clangd.fileStatus")
-    def on_file_status(self, status: FileStatus) -> None:
-        if (session := self.weaksession()) and (sb := session.get_session_buffer_for_uri_async(status["uri"])):
-            for sv in sb.session_views:
-                session.config.set_view_status(sv.view, status["state"])
+    def on_file_status(self, params: FileStatus) -> None:
+        if (session := self.weaksession()) and (sb := session.get_session_buffer_for_uri_async(params["uri"])):
+            state = "" if params["state"] == "idle" else params["state"]
+            for session_view in sb.session_views:
+                session.config.set_view_status(session_view.view, state)
 
     @notification_handler("textDocument/inactiveRegions")
     def on_inactive_regions(self, inactive: InactiveRegions) -> None:
@@ -280,7 +282,7 @@ class Clangd(LspPlugin):
                     regions = list(
                         itertools.chain.from_iterable(
                             sv.view.split_by_newlines(r1)
-                            for r1 in iter(range_to_region(r0, sv.view) for r0 in inactive["regions"])
+                            for r1 in iter(range_to_region(sv.view, r0) for r0 in inactive["regions"])
                         )
                     )
                     annotations = ["inactive"] * len(regions)
@@ -308,8 +310,7 @@ class LspClangdSwitchSourceHeader(LspTextCommand):
             )
         )
         if isinstance(response, Error):
-            sublime.error_message(f"Error determining source/header: {response}")
-            return
+            return await sublime_aio.error_message(f"Error determining source/header: {response}")
         if not response:
             sublime.status_message(f"{self.session_name}: could not determine source/header")
             return
