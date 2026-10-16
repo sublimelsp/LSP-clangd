@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/sublimelsp/lsp_smoke_test/v1/smoke.schema.json
+file: sample.c
+# Incompatible pointer to integer conversion initializing 'int' with an expression of type 'char[4]'
+expected_diagnostics:
+  source: clang
+  code: -Wint-conversion
+settings:
+  LSP-clangd.sublime-settings:
+    # Download clangd from GitHub instead of asking whether to, since it isn't installed on the runners.
+    binary: github
