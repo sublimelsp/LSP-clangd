@@ -19,12 +19,12 @@ from LSP.plugin import (
     OnPreStartContext,
     PluginStartError,
     Request,
+    ResponseError,
     ServerResponse,
     notification_handler,
     parse_uri,
     text_document_identifier,
 )
-from LSP.plugin.core.protocol import ResponseError
 from LSP.protocol import DocumentUri, TextDocumentIdentifier
 from typing_extensions import override
 
